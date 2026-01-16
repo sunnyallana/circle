@@ -6,8 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class CircleApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(CircleApplication.class, args);
-	}
-
+    public static void main(String[] args) {
+        SpringApplication.run(CircleApplication.class, args);
+    }
 }
