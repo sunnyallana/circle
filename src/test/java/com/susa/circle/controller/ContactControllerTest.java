@@ -24,8 +24,10 @@ import java.util.List;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.boot.webmvc.test.autoconfigure.AutoConfigureMockMvc;
 import org.springframework.boot.webmvc.test.autoconfigure.WebMvcTest;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.FilterType;
 import org.springframework.data.domain.Page;
@@ -57,6 +59,15 @@ class ContactControllerTest {
     private ContactRequest contactRequest;
     private ContactResponse contactResponse;
     private CustomUserDetails userDetails;
+
+    @TestConfiguration
+    static class TestConfig {
+
+        @Bean
+        public ObjectMapper objectMapper() {
+            return new ObjectMapper();
+        }
+    }
 
     @BeforeEach
     void setUp() {

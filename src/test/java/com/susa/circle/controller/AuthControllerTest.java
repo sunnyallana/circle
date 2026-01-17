@@ -20,17 +20,15 @@ import java.time.LocalDateTime;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.json.AutoConfigureJsonTesters;
 import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.boot.webmvc.test.autoconfigure.AutoConfigureMockMvc;
 import org.springframework.boot.webmvc.test.autoconfigure.WebMvcTest;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.FilterType;
-import org.springframework.context.annotation.Primary;
 import org.springframework.http.MediaType;
 import org.springframework.security.authentication.BadCredentialsException;
-import org.springframework.security.test.context.support.WithMockUser;
+import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.web.servlet.MockMvc;
 
 @WebMvcTest(
@@ -41,7 +39,6 @@ import org.springframework.test.web.servlet.MockMvc;
     )
 )
 @AutoConfigureMockMvc(addFilters = false)
-@AutoConfigureJsonTesters // Add this to auto-configure Jackson/ObjectMapper
 class AuthControllerTest {
 
     @Autowired
@@ -50,7 +47,7 @@ class AuthControllerTest {
     @Autowired
     private ObjectMapper objectMapper;
 
-    @Autowired
+    @MockitoBean
     private AuthService authService;
 
     private RegisterRequest registerRequest;
@@ -59,15 +56,8 @@ class AuthControllerTest {
     private UserResponse userResponse;
     private CustomUserDetails userDetails;
 
-    // Mock the AuthService bean and provide ObjectMapper
     @TestConfiguration
     static class TestConfig {
-
-        @Bean
-        @Primary
-        public AuthService authService() {
-            return mock(AuthService.class);
-        }
 
         @Bean
         public ObjectMapper objectMapper() {
@@ -77,6 +67,9 @@ class AuthControllerTest {
 
     @BeforeEach
     void setUp() {
+        // Reset mocks before each test
+        reset(authService);
+
         registerRequest = new RegisterRequest();
         registerRequest.setFirstName("John");
         registerRequest.setLastName("Doe");
@@ -134,7 +127,7 @@ class AuthControllerTest {
             .andExpect(jsonPath("$.data.user.firstName").value("John"))
             .andExpect(jsonPath("$.data.user.email").value("john@example.com"));
 
-        verify(authService).register(any(RegisterRequest.class));
+        verify(authService, times(1)).register(any(RegisterRequest.class));
     }
 
     @Test
@@ -200,7 +193,7 @@ class AuthControllerTest {
             .andExpect(jsonPath("$.data.token").value("test-jwt-token"))
             .andExpect(jsonPath("$.data.user.email").value("john@example.com"));
 
-        verify(authService).login(any(LoginRequest.class));
+        verify(authService, times(1)).login(any(LoginRequest.class));
     }
 
     @Test
@@ -217,7 +210,7 @@ class AuthControllerTest {
             )
             .andExpect(status().isUnauthorized());
 
-        verify(authService).login(any(LoginRequest.class));
+        verify(authService, times(1)).login(any(LoginRequest.class));
     }
 
     @Test
@@ -236,7 +229,6 @@ class AuthControllerTest {
     }
 
     @Test
-    @WithMockUser
     void testGetCurrentUser_Success() throws Exception {
         when(authService.getCurrentUser(anyLong())).thenReturn(userResponse);
 
@@ -247,11 +239,10 @@ class AuthControllerTest {
             .andExpect(jsonPath("$.data.firstName").value("John"))
             .andExpect(jsonPath("$.data.email").value("john@example.com"));
 
-        verify(authService).getCurrentUser(anyLong());
+        verify(authService, times(1)).getCurrentUser(anyLong());
     }
 
     @Test
-    @WithMockUser
     void testChangePassword_Success() throws Exception {
         ChangePasswordRequest request = new ChangePasswordRequest();
         request.setCurrentPassword("password123");
@@ -274,14 +265,13 @@ class AuthControllerTest {
                 jsonPath("$.message").value("Password changed successfully")
             );
 
-        verify(authService).changePassword(
+        verify(authService, times(1)).changePassword(
             anyLong(),
             any(ChangePasswordRequest.class)
         );
     }
 
     @Test
-    @WithMockUser
     void testChangePassword_ValidationError_ShortNewPassword()
         throws Exception {
         ChangePasswordRequest request = new ChangePasswordRequest();
