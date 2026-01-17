@@ -1,5 +1,6 @@
 package com.susa.circle.security;
 
+import jakarta.annotation.Nonnull;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -7,7 +8,6 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.lang.NonNull;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -26,16 +26,14 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
     @Override
     protected void doFilterInternal(
-        @NonNull HttpServletRequest request,
-        @NonNull HttpServletResponse response,
-        @NonNull FilterChain filterChain
+        @Nonnull HttpServletRequest request,
+        @Nonnull HttpServletResponse response,
+        @Nonnull FilterChain filterChain
     ) throws ServletException, IOException {
         try {
             String jwt = getJwtFromRequest(request);
-
             if (StringUtils.hasText(jwt)) {
                 String username = jwtUtil.extractUsername(jwt);
-
                 if (
                     username != null &&
                     SecurityContextHolder.getContext().getAuthentication() ==
@@ -43,7 +41,6 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
                 ) {
                     UserDetails userDetails =
                         userDetailsService.loadUserByUsername(username);
-
                     if (jwtUtil.validateToken(jwt, userDetails)) {
                         UsernamePasswordAuthenticationToken authentication =
                             new UsernamePasswordAuthenticationToken(
@@ -56,7 +53,6 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
                                 request
                             )
                         );
-
                         SecurityContextHolder.getContext().setAuthentication(
                             authentication
                         );
@@ -67,7 +63,6 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
         } catch (Exception e) {
             log.error("Cannot set user authentication: {}", e.getMessage());
         }
-
         filterChain.doFilter(request, response);
     }
 
