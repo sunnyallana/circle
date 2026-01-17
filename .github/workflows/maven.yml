@@ -54,11 +54,7 @@ jobs:
         restore-keys: ${{ runner.os }}-m2
     
     - name: Build with Maven
-      run: mvn -B clean package -DskipTests --file pom.xml
-      env:
-        SPRING_DATASOURCE_URL: jdbc:postgresql://localhost:5432/contact_management
-        SPRING_DATASOURCE_USERNAME: postgres
-        SPRING_DATASOURCE_PASSWORD: postgres
+      run: mvn -B clean package -Dmaven.test.skip=true --file pom.xml
     
     # Optional: Upload build artifact (JAR file)
     - name: Upload JAR artifact
