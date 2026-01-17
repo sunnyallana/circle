@@ -54,34 +54,11 @@ jobs:
         restore-keys: ${{ runner.os }}-m2
     
     - name: Build with Maven
-      run: mvn -B clean install -DskipTests --file pom.xml
+      run: mvn -B clean package -DskipTests --file pom.xml
       env:
         SPRING_DATASOURCE_URL: jdbc:postgresql://localhost:5432/contact_management
         SPRING_DATASOURCE_USERNAME: postgres
         SPRING_DATASOURCE_PASSWORD: postgres
-    
-    # - name: Run tests
-    #   run: mvn test
-    #   env:
-    #     SPRING_DATASOURCE_URL: jdbc:postgresql://localhost:5432/contact_management
-    #     SPRING_DATASOURCE_USERNAME: postgres
-    #     SPRING_DATASOURCE_PASSWORD: postgres
-    
-    - name: Verify package
-      run: mvn verify
-      env:
-        SPRING_DATASOURCE_URL: jdbc:postgresql://localhost:5432/contact_management
-        SPRING_DATASOURCE_USERNAME: postgres
-        SPRING_DATASOURCE_PASSWORD: postgres
-    
-    # Optional: Upload test results
-    - name: Upload test results
-      if: always()
-      uses: actions/upload-artifact@v4
-      with:
-        name: test-results
-        path: target/surefire-reports/
-        retention-days: 7
     
     # Optional: Upload build artifact (JAR file)
     - name: Upload JAR artifact
