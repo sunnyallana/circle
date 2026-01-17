@@ -2,6 +2,25 @@
 
 A full-stack contact management system built with Java Spring Boot backend and React frontend. This application allows users to register, login, and manage their contacts with full CRUD operations, search functionality, and pagination.
 
+## Video Demonstrations
+
+Watch these video tutorials to see the application in action and learn how to use it:
+
+### 1. API Testing with Curl and Bash Script
+[![API Tests using Curl in a Bash Script](https://img.youtube.com/vi/hzb1ZJkuT4k/maxresdefault.jpg)](https://youtu.be/hzb1ZJkuT4k)
+
+**[Watch: API Tests using Curl in a Bash Script](https://youtu.be/hzb1ZJkuT4k)**
+
+This video demonstrates:
+- Using the interactive `test-apis.sh` bash script
+- Testing all API endpoints with curl commands
+- User registration and authentication flow
+- CRUD operations for contact management
+- Search and pagination functionality
+- Error handling and validation
+
+---
+
 ## Features
 
 ### User Management
