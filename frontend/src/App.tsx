@@ -1,3 +1,4 @@
+import React from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
@@ -24,10 +25,53 @@ const queryClient = new QueryClient({
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#2563eb", // blue-600
+      main: "#4F46E5", // indigo-600
+      light: "#6366F1", // indigo-500
+      dark: "#4338CA", // indigo-700
     },
     secondary: {
-      main: "#16a34a", // green-600
+      main: "#F97316", // orange-500 (coral)
+      light: "#FB923C",
+      dark: "#EA580C",
+    },
+    background: {
+      default: "#F8FAFC",
+      paper: "#FFFFFF",
+    },
+  },
+  typography: {
+    fontFamily: '"DM Sans", "Inter", -apple-system, sans-serif',
+    h4: {
+      fontWeight: 700,
+      letterSpacing: "-0.02em",
+    },
+    h6: {
+      fontWeight: 600,
+      letterSpacing: "-0.01em",
+    },
+  },
+  shape: {
+    borderRadius: 12,
+  },
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          textTransform: "none",
+          fontWeight: 600,
+          borderRadius: "10px",
+          padding: "10px 24px",
+        },
+      },
+    },
+    MuiCard: {
+      styleOverrides: {
+        root: {
+          borderRadius: "16px",
+          boxShadow:
+            "0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)",
+        },
+      },
     },
   },
 });

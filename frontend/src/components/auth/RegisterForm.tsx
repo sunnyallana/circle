@@ -14,7 +14,8 @@ import { z } from "zod";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../hooks/useAuth";
 import { ROUTES } from "../../utils/constants";
-import PersonAddIcon from "@mui/icons-material/PersonAdd";
+import { Circle as CircleIcon } from "@mui/icons-material";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 const registerSchema = z
   .object({
@@ -25,7 +26,14 @@ const registerSchema = z
       .email("Invalid email address")
       .optional()
       .or(z.literal("")),
-    phoneNumber: z.string().optional().or(z.literal("")),
+    phoneNumber: z
+      .string()
+      .refine(
+        (val) => !val || /^\+?[1-9]\d{1,14}$/.test(val),
+        "Phone must be in international format (e.g., +1234567890)",
+      )
+      .optional()
+      .or(z.literal("")),
     password: z.string().min(6, "Password must be at least 6 characters"),
     confirmPassword: z.string(),
   })
@@ -59,32 +67,110 @@ export const RegisterForm: React.FC = () => {
       const { confirmPassword, ...registerData } = data;
       await registerUser(registerData);
       navigate(ROUTES.CONTACTS);
-    } catch (err: any) {
+    } catch (err) {
+      const error = err as { response?: { data?: { message?: string } } };
       setError(
-        err.response?.data?.message || "Registration failed. Please try again.",
+        error.response?.data?.message ||
+          "Registration failed. Please try again.",
       );
     }
   };
 
   return (
-    <Box className="flex items-center justify-center min-h-screen bg-gradient-to-br from-green-50 to-green-100 py-8">
-      <Paper elevation={3} className="p-8 w-full max-w-md">
+    <Box
+      className="flex items-center justify-center min-h-screen relative overflow-hidden py-8"
+      sx={{
+        background: "linear-gradient(135deg, #F97316 0%, #FB923C 100%)",
+      }}
+    >
+      {/* Animated background elements */}
+      <Box
+        sx={{
+          position: "absolute",
+          top: "-10%",
+          right: "-5%",
+          width: "500px",
+          height: "500px",
+          borderRadius: "50%",
+          background: "linear-gradient(135deg, #4F46E5 0%, #6366F1 100%)",
+          opacity: 0.15,
+          filter: "blur(80px)",
+          animation: "float 6s ease-in-out infinite",
+        }}
+      />
+      <Box
+        sx={{
+          position: "absolute",
+          bottom: "-10%",
+          left: "-5%",
+          width: "400px",
+          height: "400px",
+          borderRadius: "50%",
+          background: "linear-gradient(135deg, #F97316 0%, #FB923C 100%)",
+          opacity: 0.2,
+          filter: "blur(80px)",
+          animation: "float 8s ease-in-out infinite reverse",
+        }}
+      />
+
+      <Paper
+        elevation={0}
+        className="p-10 w-full max-w-md relative z-10 animate-slide-up"
+        sx={{
+          borderRadius: "24px",
+          backdropFilter: "blur(20px)",
+          background: "rgba(255, 255, 255, 0.95)",
+          boxShadow:
+            "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)",
+        }}
+      >
         <Box className="text-center mb-6">
-          <PersonAddIcon className="text-green-600 text-6xl mb-2" />
+          {/* Logo */}
+          <Box className="relative inline-flex mb-3">
+            <CircleIcon sx={{ fontSize: 56, color: "#F97316", opacity: 0.9 }} />
+            <Box
+              sx={{
+                position: "absolute",
+                top: "50%",
+                left: "50%",
+                transform: "translate(-50%, -50%)",
+                width: 20,
+                height: 20,
+                borderRadius: "50%",
+                background: "linear-gradient(135deg, #4F46E5 0%, #6366F1 100%)",
+              }}
+            />
+          </Box>
+
           <Typography
             variant="h4"
             component="h1"
-            className="font-bold text-gray-800"
+            sx={{
+              fontFamily: '"DM Sans", sans-serif',
+              fontWeight: 700,
+              background: "linear-gradient(135deg, #F97316 0%, #4F46E5 100%)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              backgroundClip: "text",
+              mb: 1,
+            }}
           >
-            Create Account
+            Join Circle
           </Typography>
-          <Typography variant="body2" className="text-gray-600 mt-2">
-            Join us to manage your contacts
+          <Typography
+            variant="body1"
+            sx={{ color: "#64748B", fontWeight: 500 }}
+          >
+            Create your account and start connecting
           </Typography>
         </Box>
 
         {error && (
-          <Alert severity="error" className="mb-4">
+          <Alert
+            severity="error"
+            className="mb-4"
+            sx={{ borderRadius: "12px" }}
+          >
             {error}
           </Alert>
         )}
@@ -98,6 +184,7 @@ export const RegisterForm: React.FC = () => {
               margin="normal"
               error={!!errors.firstName}
               helperText={errors.firstName?.message}
+              sx={{ "& .MuiOutlinedInput-root": { borderRadius: "12px" } }}
             />
 
             <TextField
@@ -107,28 +194,35 @@ export const RegisterForm: React.FC = () => {
               margin="normal"
               error={!!errors.lastName}
               helperText={errors.lastName?.message}
+              sx={{ "& .MuiOutlinedInput-root": { borderRadius: "12px" } }}
             />
           </Box>
 
           <TextField
             {...register("email")}
-            label="Email (optional)"
+            label="Email"
             type="email"
             fullWidth
             margin="normal"
             error={!!errors.email}
-            helperText={errors.email?.message}
+            helperText={errors.email?.message || "Required if no phone number"}
             autoComplete="email"
+            sx={{ "& .MuiOutlinedInput-root": { borderRadius: "12px" } }}
           />
 
           <TextField
             {...register("phoneNumber")}
-            label="Phone Number (optional)"
+            label="Phone Number"
             fullWidth
             margin="normal"
             error={!!errors.phoneNumber}
-            helperText={errors.phoneNumber?.message}
+            helperText={
+              errors.phoneNumber?.message ||
+              "Format: +1234567890 (Required if no email)"
+            }
             autoComplete="tel"
+            placeholder="+1234567890"
+            sx={{ "& .MuiOutlinedInput-root": { borderRadius: "12px" } }}
           />
 
           <TextField
@@ -140,6 +234,7 @@ export const RegisterForm: React.FC = () => {
             error={!!errors.password}
             helperText={errors.password?.message}
             autoComplete="new-password"
+            sx={{ "& .MuiOutlinedInput-root": { borderRadius: "12px" } }}
           />
 
           <TextField
@@ -151,6 +246,7 @@ export const RegisterForm: React.FC = () => {
             error={!!errors.confirmPassword}
             helperText={errors.confirmPassword?.message}
             autoComplete="new-password"
+            sx={{ "& .MuiOutlinedInput-root": { borderRadius: "12px" } }}
           />
 
           <Button
@@ -159,26 +255,64 @@ export const RegisterForm: React.FC = () => {
             fullWidth
             size="large"
             disabled={isSubmitting}
-            className="mt-6 bg-green-600 hover:bg-green-700"
+            endIcon={<ArrowForwardIcon />}
+            sx={{
+              mt: 3,
+              mb: 2,
+              py: 1.5,
+              borderRadius: "12px",
+              background: "linear-gradient(135deg, #F97316 0%, #FB923C 100%)",
+              boxShadow: "0 4px 6px -1px rgb(249 115 22 / 0.3)",
+              textTransform: "none",
+              fontSize: "1rem",
+              fontWeight: 600,
+              "&:hover": {
+                background: "linear-gradient(135deg, #EA580C 0%, #F97316 100%)",
+                boxShadow: "0 10px 15px -3px rgb(249 115 22 / 0.4)",
+              },
+              "&:disabled": {
+                background: "linear-gradient(135deg, #9CA3AF 0%, #D1D5DB 100%)",
+              },
+            }}
           >
-            {isSubmitting ? "Creating Account..." : "Register"}
+            {isSubmitting ? "Creating Account..." : "Create Account"}
           </Button>
 
           <Box className="text-center mt-4">
-            <Typography variant="body2" className="text-gray-600">
+            <Typography variant="body2" sx={{ color: "#64748B" }}>
               Already have an account?{" "}
               <Link
                 component="button"
                 type="button"
                 onClick={() => navigate(ROUTES.LOGIN)}
-                className="text-green-600 hover:text-green-800"
+                sx={{
+                  color: "#F97316",
+                  fontWeight: 600,
+                  textDecoration: "none",
+                  "&:hover": {
+                    textDecoration: "underline",
+                  },
+                }}
               >
-                Login here
+                Sign In
               </Link>
             </Typography>
           </Box>
         </form>
       </Paper>
+
+      <style>
+        {`
+          @keyframes float {
+            0%, 100% {
+              transform: translateY(0) scale(1);
+            }
+            50% {
+              transform: translateY(-20px) scale(1.05);
+            }
+          }
+        `}
+      </style>
     </Box>
   );
 };

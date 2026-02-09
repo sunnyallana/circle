@@ -1,18 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    --circle-indigo: #4f46e5;
+    --circle-indigo-light: #6366f1;
+    --circle-indigo-dark: #4338ca;
+    --circle-coral: #f97316;
+    --circle-coral-light: #fb923c;
+    --circle-bg: #f8fafc;
+    --circle-surface: #ffffff;
+    --circle-border: #e2e8f0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family:
-        -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-        "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+        "Inter",
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
         sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background: var(--circle-bg);
+    color: #1e293b;
 }
 
-code {
-    font-family:
-        source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.circle-gradient {
+    background: linear-gradient(
+        135deg,
+        var(--circle-indigo) 0%,
+        var(--circle-indigo-light) 100%
+    );
+}
+
+.circle-gradient-coral {
+    background: linear-gradient(
+        135deg,
+        var(--circle-coral) 0%,
+        var(--circle-coral-light) 100%
+    );
+}
+
+.circle-card {
+    background: white;
+    border-radius: 16px;
+    box-shadow:
+        0 1px 3px 0 rgb(0 0 0 / 0.1),
+        0 1px 2px -1px rgb(0 0 0 / 0.1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.circle-card:hover {
+    box-shadow:
+        0 10px 15px -3px rgb(0 0 0 / 0.1),
+        0 4px 6px -4px rgb(0 0 0 / 0.1);
+    transform: translateY(-2px);
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+.animate-slide-up {
+    animation: slideUp 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.circle-logo {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    background: linear-gradient(
+        135deg,
+        var(--circle-indigo) 0%,
+        var(--circle-coral) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }

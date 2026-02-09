@@ -14,17 +14,33 @@ export const ContactSearch: React.FC<ContactSearchProps> = ({
   return (
     <TextField
       fullWidth
-      placeholder="Search contacts by name..."
+      placeholder="Search by name, email, or phone..."
       value={value}
       onChange={(e) => onChange(e.target.value)}
       InputProps={{
         startAdornment: (
           <InputAdornment position="start">
-            <SearchIcon className="text-gray-400" />
+            <SearchIcon sx={{ color: "#4F46E5" }} />
           </InputAdornment>
         ),
       }}
-      className="bg-white"
+      sx={{
+        "& .MuiOutlinedInput-root": {
+          borderRadius: "12px",
+          backgroundColor: "white",
+          "&:hover": {
+            "& .MuiOutlinedInput-notchedOutline": {
+              borderColor: "#4F46E5",
+            },
+          },
+          "&.Mui-focused": {
+            "& .MuiOutlinedInput-notchedOutline": {
+              borderColor: "#4F46E5",
+              borderWidth: "2px",
+            },
+          },
+        },
+      }}
     />
   );
 };

@@ -14,7 +14,8 @@ import { z } from "zod";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../hooks/useAuth";
 import { ROUTES } from "../../utils/constants";
-import LoginIcon from "@mui/icons-material/Login";
+import { Circle as CircleIcon } from "@mui/icons-material";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 const loginSchema = z.object({
   username: z.string().min(1, "Username is required"),
@@ -41,32 +42,109 @@ export const LoginForm: React.FC = () => {
       setError("");
       await login(data);
       navigate(ROUTES.CONTACTS);
-    } catch (err: any) {
+    } catch (err) {
+      const error = err as { response?: { data?: { message?: string } } };
       setError(
-        err.response?.data?.message || "Login failed. Please try again.",
+        error.response?.data?.message || "Login failed. Please try again.",
       );
     }
   };
 
   return (
-    <Box className="flex items-center justify-center min-h-screen bg-gradient-to-br from-blue-50 to-blue-100">
-      <Paper elevation={3} className="p-8 w-full max-w-md">
-        <Box className="text-center mb-6">
-          <LoginIcon className="text-blue-600 text-6xl mb-2" />
+    <Box
+      className="flex items-center justify-center min-h-screen relative overflow-hidden"
+      sx={{
+        background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+      }}
+    >
+      {/* Animated background elements */}
+      <Box
+        sx={{
+          position: "absolute",
+          top: "-10%",
+          right: "-5%",
+          width: "500px",
+          height: "500px",
+          borderRadius: "50%",
+          background: "linear-gradient(135deg, #F97316 0%, #FB923C 100%)",
+          opacity: 0.15,
+          filter: "blur(80px)",
+          animation: "float 6s ease-in-out infinite",
+        }}
+      />
+      <Box
+        sx={{
+          position: "absolute",
+          bottom: "-10%",
+          left: "-5%",
+          width: "400px",
+          height: "400px",
+          borderRadius: "50%",
+          background: "linear-gradient(135deg, #4F46E5 0%, #6366F1 100%)",
+          opacity: 0.2,
+          filter: "blur(80px)",
+          animation: "float 8s ease-in-out infinite reverse",
+        }}
+      />
+
+      <Paper
+        elevation={0}
+        className="p-10 w-full max-w-md relative z-10 animate-slide-up"
+        sx={{
+          borderRadius: "24px",
+          backdropFilter: "blur(20px)",
+          background: "rgba(255, 255, 255, 0.95)",
+          boxShadow:
+            "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)",
+        }}
+      >
+        <Box className="text-center mb-8">
+          {/* Logo */}
+          <Box className="relative inline-flex mb-4">
+            <CircleIcon sx={{ fontSize: 64, color: "#4F46E5", opacity: 0.9 }} />
+            <Box
+              sx={{
+                position: "absolute",
+                top: "50%",
+                left: "50%",
+                transform: "translate(-50%, -50%)",
+                width: 24,
+                height: 24,
+                borderRadius: "50%",
+                background: "linear-gradient(135deg, #F97316 0%, #FB923C 100%)",
+              }}
+            />
+          </Box>
+
           <Typography
             variant="h4"
             component="h1"
-            className="font-bold text-gray-800"
+            sx={{
+              fontFamily: '"DM Sans", sans-serif',
+              fontWeight: 700,
+              background: "linear-gradient(135deg, #4F46E5 0%, #F97316 100%)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              backgroundClip: "text",
+              mb: 1,
+            }}
           >
-            Welcome Back
+            Welcome to Circle
           </Typography>
-          <Typography variant="body2" className="text-gray-600 mt-2">
-            Sign in to manage your contacts
+          <Typography
+            variant="body1"
+            sx={{ color: "#64748B", fontWeight: 500 }}
+          >
+            Connect with your network
           </Typography>
         </Box>
 
         {error && (
-          <Alert severity="error" className="mb-4">
+          <Alert
+            severity="error"
+            className="mb-6"
+            sx={{ borderRadius: "12px" }}
+          >
             {error}
           </Alert>
         )}
@@ -80,6 +158,11 @@ export const LoginForm: React.FC = () => {
             error={!!errors.username}
             helperText={errors.username?.message}
             autoComplete="username"
+            sx={{
+              "& .MuiOutlinedInput-root": {
+                borderRadius: "12px",
+              },
+            }}
           />
 
           <TextField
@@ -91,6 +174,11 @@ export const LoginForm: React.FC = () => {
             error={!!errors.password}
             helperText={errors.password?.message}
             autoComplete="current-password"
+            sx={{
+              "& .MuiOutlinedInput-root": {
+                borderRadius: "12px",
+              },
+            }}
           />
 
           <Button
@@ -99,26 +187,64 @@ export const LoginForm: React.FC = () => {
             fullWidth
             size="large"
             disabled={isSubmitting}
-            className="mt-6 bg-blue-600 hover:bg-blue-700"
+            endIcon={<ArrowForwardIcon />}
+            sx={{
+              mt: 4,
+              mb: 2,
+              py: 1.5,
+              borderRadius: "12px",
+              background: "linear-gradient(135deg, #4F46E5 0%, #6366F1 100%)",
+              boxShadow: "0 4px 6px -1px rgb(79 70 229 / 0.3)",
+              textTransform: "none",
+              fontSize: "1rem",
+              fontWeight: 600,
+              "&:hover": {
+                background: "linear-gradient(135deg, #4338CA 0%, #4F46E5 100%)",
+                boxShadow: "0 10px 15px -3px rgb(79 70 229 / 0.4)",
+              },
+              "&:disabled": {
+                background: "linear-gradient(135deg, #9CA3AF 0%, #D1D5DB 100%)",
+              },
+            }}
           >
             {isSubmitting ? "Signing in..." : "Sign In"}
           </Button>
 
-          <Box className="text-center mt-4">
-            <Typography variant="body2" className="text-gray-600">
+          <Box className="text-center mt-6">
+            <Typography variant="body2" sx={{ color: "#64748B" }}>
               Don't have an account?{" "}
               <Link
                 component="button"
                 type="button"
                 onClick={() => navigate(ROUTES.REGISTER)}
-                className="text-blue-600 hover:text-blue-800"
+                sx={{
+                  color: "#4F46E5",
+                  fontWeight: 600,
+                  textDecoration: "none",
+                  "&:hover": {
+                    textDecoration: "underline",
+                  },
+                }}
               >
-                Register here
+                Join Circle
               </Link>
             </Typography>
           </Box>
         </form>
       </Paper>
+
+      <style>
+        {`
+          @keyframes float {
+            0%, 100% {
+              transform: translateY(0) scale(1);
+            }
+            50% {
+              transform: translateY(-20px) scale(1.05);
+            }
+          }
+        `}
+      </style>
     </Box>
   );
 };
