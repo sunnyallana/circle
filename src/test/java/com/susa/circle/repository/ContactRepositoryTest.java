@@ -25,9 +25,6 @@ class ContactRepositoryTest {
     @Autowired
     private ContactRepository contactRepository;
 
-    @Autowired
-    private UserRepository userRepository;
-
     private User testUser;
     private Contact testContact1;
     private Contact testContact2;

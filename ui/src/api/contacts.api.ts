@@ -49,4 +49,55 @@ export const contactsApi = {
     const response = await axiosInstance.delete(`/contacts/${id}`);
     return response.data;
   },
+
+  // Import/Export functions
+  importContactsFromJson: async (
+    file: File,
+  ): Promise<ApiResponse<Contact[]>> => {
+    const formData = new FormData();
+    formData.append("file", file);
+
+    const response = await axiosInstance.post(
+      "/contacts/import/json",
+      formData,
+      {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      },
+    );
+    return response.data;
+  },
+
+  importContactsFromCsv: async (
+    file: File,
+  ): Promise<ApiResponse<Contact[]>> => {
+    const formData = new FormData();
+    formData.append("file", file);
+
+    const response = await axiosInstance.post(
+      "/contacts/import/csv",
+      formData,
+      {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      },
+    );
+    return response.data;
+  },
+
+  exportContactsAsJson: async (): Promise<Blob> => {
+    const response = await axiosInstance.get("/contacts/export/json", {
+      responseType: "blob",
+    });
+    return response.data;
+  },
+
+  exportContactsAsCsv: async (): Promise<Blob> => {
+    const response = await axiosInstance.get("/contacts/export/csv", {
+      responseType: "blob",
+    });
+    return response.data;
+  },
 };

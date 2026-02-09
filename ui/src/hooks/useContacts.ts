@@ -70,3 +70,60 @@ export const useDeleteContact = () => {
     },
   });
 };
+
+// Import/Export Hooks
+export const useImportContactsFromJson = () => {
+  const queryClient = useQueryClient();
+
+  return useMutation({
+    mutationFn: (file: File) => contactsApi.importContactsFromJson(file),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: [QUERY_KEYS.CONTACTS] });
+      queryClient.invalidateQueries({ queryKey: [QUERY_KEYS.SEARCH] });
+    },
+  });
+};
+
+export const useImportContactsFromCsv = () => {
+  const queryClient = useQueryClient();
+
+  return useMutation({
+    mutationFn: (file: File) => contactsApi.importContactsFromCsv(file),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: [QUERY_KEYS.CONTACTS] });
+      queryClient.invalidateQueries({ queryKey: [QUERY_KEYS.SEARCH] });
+    },
+  });
+};
+
+export const useExportContactsAsJson = () => {
+  return useMutation({
+    mutationFn: async () => {
+      const blob = await contactsApi.exportContactsAsJson();
+      const url = window.URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = `contacts-export-${new Date().toISOString().split("T")[0]}.json`;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      window.URL.revokeObjectURL(url);
+    },
+  });
+};
+
+export const useExportContactsAsCsv = () => {
+  return useMutation({
+    mutationFn: async () => {
+      const blob = await contactsApi.exportContactsAsCsv();
+      const url = window.URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = `contacts-export-${new Date().toISOString().split("T")[0]}.csv`;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      window.URL.revokeObjectURL(url);
+    },
+  });
+};

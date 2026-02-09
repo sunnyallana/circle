@@ -15,20 +15,23 @@ import { ContactSearch } from "../components/contacts/ContactSearch";
 import { CreateContactModal } from "../components/contacts/CreateContactModal";
 import { UpdateContactModal } from "../components/contacts/UpdateContactModal";
 import { DeleteContactModal } from "../components/contacts/DeleteContactModal";
+import { ImportExportModal } from "../components/contacts/ImportExportModal";
 import { useContacts, useSearchContacts } from "../hooks/useContacts";
 import { useDebounce } from "../hooks/useDebounce";
 import { Contact } from "../types";
 import { PAGINATION } from "../utils/constants";
 import AddIcon from "@mui/icons-material/Add";
 import PeopleIcon from "@mui/icons-material/People";
+import SwapVertIcon from "@mui/icons-material/SwapVert";
 
 export const ContactsPage: React.FC = () => {
-  const [page, setPage] = useState(PAGINATION.DEFAULT_PAGE);
-  const [size, setSize] = useState(PAGINATION.DEFAULT_SIZE);
+  const [page, setPage] = useState<number>(PAGINATION.DEFAULT_PAGE);
+  const [size, setSize] = useState<number>(PAGINATION.DEFAULT_SIZE);
   const [searchQuery, setSearchQuery] = useState("");
   const [createModalOpen, setCreateModalOpen] = useState(false);
   const [updateModalOpen, setUpdateModalOpen] = useState(false);
   const [deleteModalOpen, setDeleteModalOpen] = useState(false);
+  const [importExportModalOpen, setImportExportModalOpen] = useState(false);
   const [selectedContact, setSelectedContact] = useState<Contact | null>(null);
 
   const debouncedSearch = useDebounce(searchQuery, 500);
@@ -120,27 +123,50 @@ export const ContactsPage: React.FC = () => {
                 Manage and organize your network
               </Typography>
             </Box>
-            <Button
-              variant="contained"
-              startIcon={<AddIcon />}
-              onClick={() => setCreateModalOpen(true)}
-              sx={{
-                borderRadius: "12px",
-                background: "linear-gradient(135deg, #4F46E5 0%, #6366F1 100%)",
-                boxShadow: "0 4px 6px -1px rgb(79 70 229 / 0.3)",
-                textTransform: "none",
-                fontWeight: 600,
-                px: 3,
-                py: 1.5,
-                "&:hover": {
+            <Box sx={{ display: "flex", gap: 2 }}>
+              <Button
+                variant="outlined"
+                startIcon={<SwapVertIcon />}
+                onClick={() => setImportExportModalOpen(true)}
+                sx={{
+                  borderRadius: "12px",
+                  borderColor: "#4F46E5",
+                  color: "#4F46E5",
+                  textTransform: "none",
+                  fontWeight: 600,
+                  px: 3,
+                  py: 1.5,
+                  "&:hover": {
+                    borderColor: "#4338CA",
+                    backgroundColor: "#EEF2FF",
+                  },
+                }}
+              >
+                Import / Export
+              </Button>
+              <Button
+                variant="contained"
+                startIcon={<AddIcon />}
+                onClick={() => setCreateModalOpen(true)}
+                sx={{
+                  borderRadius: "12px",
                   background:
-                    "linear-gradient(135deg, #4338CA 0%, #4F46E5 100%)",
-                  boxShadow: "0 10px 15px -3px rgb(79 70 229 / 0.4)",
-                },
-              }}
-            >
-              Add Contact
-            </Button>
+                    "linear-gradient(135deg, #4F46E5 0%, #6366F1 100%)",
+                  boxShadow: "0 4px 6px -1px rgb(79 70 229 / 0.3)",
+                  textTransform: "none",
+                  fontWeight: 600,
+                  px: 3,
+                  py: 1.5,
+                  "&:hover": {
+                    background:
+                      "linear-gradient(135deg, #4338CA 0%, #4F46E5 100%)",
+                    boxShadow: "0 10px 15px -3px rgb(79 70 229 / 0.4)",
+                  },
+                }}
+              >
+                Add Contact
+              </Button>
+            </Box>
           </Box>
 
           {/* Stats */}
@@ -229,6 +255,11 @@ export const ContactsPage: React.FC = () => {
           setDeleteModalOpen(false);
           setSelectedContact(null);
         }}
+      />
+
+      <ImportExportModal
+        open={importExportModalOpen}
+        onClose={() => setImportExportModalOpen(false)}
       />
     </Layout>
   );
