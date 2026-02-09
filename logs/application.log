@@ -2035,3 +2035,119 @@
 	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
 	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
 
+2026-02-09 15:34:00 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/contacts?page=0&size=10&sortBy=firstName&sortDir=ASC
+2026-02-09 15:34:00 [http-nio-8080-exec-3] DEBUG c.s.c.s.CustomUserDetailsService - Loading user by username: study.sunnyallana@gmail.com
+2026-02-09 15:34:00 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.active,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.last_name,
+        u1_0.password,
+        u1_0.phone_number,
+        u1_0.updated_at 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-09 15:34:00 [http-nio-8080-exec-3] DEBUG c.s.c.s.JwtAuthenticationFilter - Set authentication for user: study.sunnyallana@gmail.com
+2026-02-09 15:34:00 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/contacts?page=0&size=10&sortBy=firstName&sortDir=ASC
+2026-02-09 15:34:00 [http-nio-8080-exec-3] INFO  c.s.c.controller.ContactController - Get all contacts endpoint called
+2026-02-09 15:34:00 [http-nio-8080-exec-3] DEBUG c.susa.circle.service.ContactService - Fetching contacts for user id: 1
+2026-02-09 15:34:00 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.created_at,
+        c1_0.first_name,
+        c1_0.last_name,
+        c1_0.title,
+        c1_0.updated_at,
+        c1_0.user_id 
+    from
+        contacts c1_0 
+    where
+        c1_0.user_id=? 
+    order by
+        c1_0.first_name 
+    fetch
+        first ? rows only
+2026-02-09 15:34:00 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email,
+        e1_0.type 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-02-09 15:34:00 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.phone_number,
+        p1_0.type 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-02-09 15:34:21 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/contacts?page=0&size=10&sortBy=firstName&sortDir=ASC
+2026-02-09 15:34:21 [http-nio-8080-exec-4] DEBUG c.s.c.s.CustomUserDetailsService - Loading user by username: study.sunnyallana@gmail.com
+2026-02-09 15:34:21 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.active,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.last_name,
+        u1_0.password,
+        u1_0.phone_number,
+        u1_0.updated_at 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-09 15:34:21 [http-nio-8080-exec-4] DEBUG c.s.c.s.JwtAuthenticationFilter - Set authentication for user: study.sunnyallana@gmail.com
+2026-02-09 15:34:21 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/contacts?page=0&size=10&sortBy=firstName&sortDir=ASC
+2026-02-09 15:34:21 [http-nio-8080-exec-4] INFO  c.s.c.controller.ContactController - Get all contacts endpoint called
+2026-02-09 15:34:21 [http-nio-8080-exec-4] DEBUG c.susa.circle.service.ContactService - Fetching contacts for user id: 1
+2026-02-09 15:34:21 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.created_at,
+        c1_0.first_name,
+        c1_0.last_name,
+        c1_0.title,
+        c1_0.updated_at,
+        c1_0.user_id 
+    from
+        contacts c1_0 
+    where
+        c1_0.user_id=? 
+    order by
+        c1_0.first_name 
+    fetch
+        first ? rows only
+2026-02-09 15:34:21 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email,
+        e1_0.type 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-02-09 15:34:21 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.phone_number,
+        p1_0.type 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
