@@ -116,7 +116,7 @@ export const UpdateContactModal: React.FC<UpdateContactModalProps> = ({
 
   return (
     <Dialog open={open} onClose={onClose} maxWidth="md" fullWidth>
-      <DialogTitle className="bg-green-600 text-white">
+      <DialogTitle className="bg-blue-600 text-white">
         <Typography variant="h6">Update Contact</Typography>
       </DialogTitle>
 

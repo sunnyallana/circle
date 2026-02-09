@@ -2151,3 +2151,415 @@
         contact_phones p1_0 
     where
         p1_0.contact_id=?
+2026-02-09 15:45:46 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/contacts?page=0&size=10&sortBy=firstName&sortDir=ASC
+2026-02-09 15:45:46 [http-nio-8080-exec-5] DEBUG c.s.c.s.CustomUserDetailsService - Loading user by username: study.sunnyallana@gmail.com
+2026-02-09 15:45:46 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.active,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.last_name,
+        u1_0.password,
+        u1_0.phone_number,
+        u1_0.updated_at 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-09 15:45:46 [http-nio-8080-exec-5] DEBUG c.s.c.s.JwtAuthenticationFilter - Set authentication for user: study.sunnyallana@gmail.com
+2026-02-09 15:45:46 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/contacts?page=0&size=10&sortBy=firstName&sortDir=ASC
+2026-02-09 15:45:46 [http-nio-8080-exec-5] INFO  c.s.c.controller.ContactController - Get all contacts endpoint called
+2026-02-09 15:45:46 [http-nio-8080-exec-5] DEBUG c.susa.circle.service.ContactService - Fetching contacts for user id: 1
+2026-02-09 15:45:46 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.created_at,
+        c1_0.first_name,
+        c1_0.last_name,
+        c1_0.title,
+        c1_0.updated_at,
+        c1_0.user_id 
+    from
+        contacts c1_0 
+    where
+        c1_0.user_id=? 
+    order by
+        c1_0.first_name 
+    fetch
+        first ? rows only
+2026-02-09 15:45:46 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email,
+        e1_0.type 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-02-09 15:45:46 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.phone_number,
+        p1_0.type 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-02-09 15:46:52 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/contacts/search?query=s&page=0&size=10&sortBy=firstName&sortDir=ASC
+2026-02-09 15:46:52 [http-nio-8080-exec-6] DEBUG c.s.c.s.CustomUserDetailsService - Loading user by username: study.sunnyallana@gmail.com
+2026-02-09 15:46:52 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.active,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.last_name,
+        u1_0.password,
+        u1_0.phone_number,
+        u1_0.updated_at 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-09 15:46:52 [http-nio-8080-exec-6] DEBUG c.s.c.s.JwtAuthenticationFilter - Set authentication for user: study.sunnyallana@gmail.com
+2026-02-09 15:46:52 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/contacts/search?query=s&page=0&size=10&sortBy=firstName&sortDir=ASC
+2026-02-09 15:46:52 [http-nio-8080-exec-6] INFO  c.s.c.controller.ContactController - Search contacts endpoint called with query: s
+2026-02-09 15:46:52 [http-nio-8080-exec-6] DEBUG c.susa.circle.service.ContactService - Searching contacts for user id: 1 with search term: s
+2026-02-09 15:46:52 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.created_at,
+        c1_0.first_name,
+        c1_0.last_name,
+        c1_0.title,
+        c1_0.updated_at,
+        c1_0.user_id 
+    from
+        contacts c1_0 
+    where
+        c1_0.user_id=? 
+        and (
+            lower(c1_0.first_name) like lower(('%'||?||'%')) escape '' 
+            or lower(c1_0.last_name) like lower(('%'||?||'%')) escape ''
+        ) 
+    order by
+        c1_0.first_name 
+    fetch
+        first ? rows only
+2026-02-09 15:46:52 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email,
+        e1_0.type 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-02-09 15:46:52 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.phone_number,
+        p1_0.type 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-02-09 15:46:54 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/contacts/search?query=sunny&page=0&size=10&sortBy=firstName&sortDir=ASC
+2026-02-09 15:46:54 [http-nio-8080-exec-7] DEBUG c.s.c.s.CustomUserDetailsService - Loading user by username: study.sunnyallana@gmail.com
+2026-02-09 15:46:54 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.active,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.last_name,
+        u1_0.password,
+        u1_0.phone_number,
+        u1_0.updated_at 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-09 15:46:54 [http-nio-8080-exec-7] DEBUG c.s.c.s.JwtAuthenticationFilter - Set authentication for user: study.sunnyallana@gmail.com
+2026-02-09 15:46:54 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/contacts/search?query=sunny&page=0&size=10&sortBy=firstName&sortDir=ASC
+2026-02-09 15:46:54 [http-nio-8080-exec-7] INFO  c.s.c.controller.ContactController - Search contacts endpoint called with query: sunny
+2026-02-09 15:46:54 [http-nio-8080-exec-7] DEBUG c.susa.circle.service.ContactService - Searching contacts for user id: 1 with search term: sunny
+2026-02-09 15:46:54 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.created_at,
+        c1_0.first_name,
+        c1_0.last_name,
+        c1_0.title,
+        c1_0.updated_at,
+        c1_0.user_id 
+    from
+        contacts c1_0 
+    where
+        c1_0.user_id=? 
+        and (
+            lower(c1_0.first_name) like lower(('%'||?||'%')) escape '' 
+            or lower(c1_0.last_name) like lower(('%'||?||'%')) escape ''
+        ) 
+    order by
+        c1_0.first_name 
+    fetch
+        first ? rows only
+2026-02-09 15:46:54 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email,
+        e1_0.type 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-02-09 15:46:54 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.phone_number,
+        p1_0.type 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
+2026-02-09 15:46:55 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/contacts/search?query=sunny+&page=0&size=10&sortBy=firstName&sortDir=ASC
+2026-02-09 15:46:55 [http-nio-8080-exec-8] DEBUG c.s.c.s.CustomUserDetailsService - Loading user by username: study.sunnyallana@gmail.com
+2026-02-09 15:46:55 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.active,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.last_name,
+        u1_0.password,
+        u1_0.phone_number,
+        u1_0.updated_at 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-09 15:46:55 [http-nio-8080-exec-8] DEBUG c.s.c.s.JwtAuthenticationFilter - Set authentication for user: study.sunnyallana@gmail.com
+2026-02-09 15:46:55 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/contacts/search?query=sunny+&page=0&size=10&sortBy=firstName&sortDir=ASC
+2026-02-09 15:46:55 [http-nio-8080-exec-8] INFO  c.s.c.controller.ContactController - Search contacts endpoint called with query: sunny 
+2026-02-09 15:46:55 [http-nio-8080-exec-8] DEBUG c.susa.circle.service.ContactService - Searching contacts for user id: 1 with search term: sunny 
+2026-02-09 15:46:55 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.created_at,
+        c1_0.first_name,
+        c1_0.last_name,
+        c1_0.title,
+        c1_0.updated_at,
+        c1_0.user_id 
+    from
+        contacts c1_0 
+    where
+        c1_0.user_id=? 
+        and (
+            lower(c1_0.first_name) like lower(('%'||?||'%')) escape '' 
+            or lower(c1_0.last_name) like lower(('%'||?||'%')) escape ''
+        ) 
+    order by
+        c1_0.first_name 
+    fetch
+        first ? rows only
+2026-02-09 15:47:02 [http-nio-8080-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/contacts/search?query=sunny+sh&page=0&size=10&sortBy=firstName&sortDir=ASC
+2026-02-09 15:47:02 [http-nio-8080-exec-9] DEBUG c.s.c.s.CustomUserDetailsService - Loading user by username: study.sunnyallana@gmail.com
+2026-02-09 15:47:02 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.active,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.last_name,
+        u1_0.password,
+        u1_0.phone_number,
+        u1_0.updated_at 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-09 15:47:02 [http-nio-8080-exec-9] DEBUG c.s.c.s.JwtAuthenticationFilter - Set authentication for user: study.sunnyallana@gmail.com
+2026-02-09 15:47:02 [http-nio-8080-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/contacts/search?query=sunny+sh&page=0&size=10&sortBy=firstName&sortDir=ASC
+2026-02-09 15:47:02 [http-nio-8080-exec-9] INFO  c.s.c.controller.ContactController - Search contacts endpoint called with query: sunny sh
+2026-02-09 15:47:02 [http-nio-8080-exec-9] DEBUG c.susa.circle.service.ContactService - Searching contacts for user id: 1 with search term: sunny sh
+2026-02-09 15:47:02 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.created_at,
+        c1_0.first_name,
+        c1_0.last_name,
+        c1_0.title,
+        c1_0.updated_at,
+        c1_0.user_id 
+    from
+        contacts c1_0 
+    where
+        c1_0.user_id=? 
+        and (
+            lower(c1_0.first_name) like lower(('%'||?||'%')) escape '' 
+            or lower(c1_0.last_name) like lower(('%'||?||'%')) escape ''
+        ) 
+    order by
+        c1_0.first_name 
+    fetch
+        first ? rows only
+2026-02-09 15:47:04 [http-nio-8080-exec-10] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/contacts/search?query=sunny+S&page=0&size=10&sortBy=firstName&sortDir=ASC
+2026-02-09 15:47:04 [http-nio-8080-exec-10] DEBUG c.s.c.s.CustomUserDetailsService - Loading user by username: study.sunnyallana@gmail.com
+2026-02-09 15:47:04 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.active,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.last_name,
+        u1_0.password,
+        u1_0.phone_number,
+        u1_0.updated_at 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-09 15:47:04 [http-nio-8080-exec-10] DEBUG c.s.c.s.JwtAuthenticationFilter - Set authentication for user: study.sunnyallana@gmail.com
+2026-02-09 15:47:04 [http-nio-8080-exec-10] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/contacts/search?query=sunny+S&page=0&size=10&sortBy=firstName&sortDir=ASC
+2026-02-09 15:47:04 [http-nio-8080-exec-10] INFO  c.s.c.controller.ContactController - Search contacts endpoint called with query: sunny S
+2026-02-09 15:47:04 [http-nio-8080-exec-10] DEBUG c.susa.circle.service.ContactService - Searching contacts for user id: 1 with search term: sunny S
+2026-02-09 15:47:04 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.created_at,
+        c1_0.first_name,
+        c1_0.last_name,
+        c1_0.title,
+        c1_0.updated_at,
+        c1_0.user_id 
+    from
+        contacts c1_0 
+    where
+        c1_0.user_id=? 
+        and (
+            lower(c1_0.first_name) like lower(('%'||?||'%')) escape '' 
+            or lower(c1_0.last_name) like lower(('%'||?||'%')) escape ''
+        ) 
+    order by
+        c1_0.first_name 
+    fetch
+        first ? rows only
+2026-02-09 15:47:05 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/contacts/search?query=sunny+Sh&page=0&size=10&sortBy=firstName&sortDir=ASC
+2026-02-09 15:47:05 [http-nio-8080-exec-1] DEBUG c.s.c.s.CustomUserDetailsService - Loading user by username: study.sunnyallana@gmail.com
+2026-02-09 15:47:05 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.active,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.last_name,
+        u1_0.password,
+        u1_0.phone_number,
+        u1_0.updated_at 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-09 15:47:05 [http-nio-8080-exec-1] DEBUG c.s.c.s.JwtAuthenticationFilter - Set authentication for user: study.sunnyallana@gmail.com
+2026-02-09 15:47:05 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/contacts/search?query=sunny+Sh&page=0&size=10&sortBy=firstName&sortDir=ASC
+2026-02-09 15:47:05 [http-nio-8080-exec-1] INFO  c.s.c.controller.ContactController - Search contacts endpoint called with query: sunny Sh
+2026-02-09 15:47:05 [http-nio-8080-exec-1] DEBUG c.susa.circle.service.ContactService - Searching contacts for user id: 1 with search term: sunny Sh
+2026-02-09 15:47:05 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.created_at,
+        c1_0.first_name,
+        c1_0.last_name,
+        c1_0.title,
+        c1_0.updated_at,
+        c1_0.user_id 
+    from
+        contacts c1_0 
+    where
+        c1_0.user_id=? 
+        and (
+            lower(c1_0.first_name) like lower(('%'||?||'%')) escape '' 
+            or lower(c1_0.last_name) like lower(('%'||?||'%')) escape ''
+        ) 
+    order by
+        c1_0.first_name 
+    fetch
+        first ? rows only
+2026-02-09 15:47:10 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/contacts/search?query=Sunny&page=0&size=10&sortBy=firstName&sortDir=ASC
+2026-02-09 15:47:10 [http-nio-8080-exec-2] DEBUG c.s.c.s.CustomUserDetailsService - Loading user by username: study.sunnyallana@gmail.com
+2026-02-09 15:47:10 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.active,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.last_name,
+        u1_0.password,
+        u1_0.phone_number,
+        u1_0.updated_at 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-09 15:47:10 [http-nio-8080-exec-2] DEBUG c.s.c.s.JwtAuthenticationFilter - Set authentication for user: study.sunnyallana@gmail.com
+2026-02-09 15:47:10 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/contacts/search?query=Sunny&page=0&size=10&sortBy=firstName&sortDir=ASC
+2026-02-09 15:47:10 [http-nio-8080-exec-2] INFO  c.s.c.controller.ContactController - Search contacts endpoint called with query: Sunny
+2026-02-09 15:47:10 [http-nio-8080-exec-2] DEBUG c.susa.circle.service.ContactService - Searching contacts for user id: 1 with search term: Sunny
+2026-02-09 15:47:10 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.created_at,
+        c1_0.first_name,
+        c1_0.last_name,
+        c1_0.title,
+        c1_0.updated_at,
+        c1_0.user_id 
+    from
+        contacts c1_0 
+    where
+        c1_0.user_id=? 
+        and (
+            lower(c1_0.first_name) like lower(('%'||?||'%')) escape '' 
+            or lower(c1_0.last_name) like lower(('%'||?||'%')) escape ''
+        ) 
+    order by
+        c1_0.first_name 
+    fetch
+        first ? rows only
+2026-02-09 15:47:10 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        e1_0.contact_id,
+        e1_0.id,
+        e1_0.email,
+        e1_0.type 
+    from
+        contact_emails e1_0 
+    where
+        e1_0.contact_id=?
+2026-02-09 15:47:10 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        p1_0.contact_id,
+        p1_0.id,
+        p1_0.phone_number,
+        p1_0.type 
+    from
+        contact_phones p1_0 
+    where
+        p1_0.contact_id=?
