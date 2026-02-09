@@ -17,6 +17,8 @@ import com.susa.circle.enums.EmailType;
 import com.susa.circle.enums.PhoneType;
 import com.susa.circle.security.CustomUserDetails;
 import com.susa.circle.security.JwtAuthenticationFilter;
+import com.susa.circle.service.ContactExportService;
+import com.susa.circle.service.ContactImportService;
 import com.susa.circle.service.ContactService;
 import java.time.LocalDateTime;
 import java.util.Arrays;
@@ -52,6 +54,12 @@ class ContactControllerTest {
 
     @MockitoBean
     private ContactService contactService;
+
+    @MockitoBean
+    private ContactExportService contactExportService;
+
+    @MockitoBean
+    private ContactImportService contactImportService;
 
     private ContactRequest contactRequest;
     private ContactResponse contactResponse;
