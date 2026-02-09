@@ -13978,3 +13978,1875 @@ java.lang.IllegalStateException: ApplicationContext failure threshold (1) exceed
 2026-02-09 19:46:03 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2026-02-09 19:46:03 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
 2026-02-09 19:46:03 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2026-02-09 20:13:59 [main] INFO  c.s.c.controller.AuthControllerTest - Starting AuthControllerTest using Java 25.0.2 with PID 17031 (started by onyxd in /home/onyxd/Downloads/repo/circle)
+2026-02-09 20:13:59 [main] DEBUG c.s.c.controller.AuthControllerTest - Running with Spring Boot v4.0.1, Spring v7.0.2
+2026-02-09 20:13:59 [main] INFO  c.s.c.controller.AuthControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-02-09 20:14:03 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-02-09 20:14:03 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2026-02-09 20:14:03 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 3 ms
+2026-02-09 20:14:03 [main] INFO  c.s.c.controller.AuthControllerTest - Started AuthControllerTest in 5.722 seconds (process running for 8.674)
+2026-02-09 20:14:04 [main] INFO  c.s.circle.controller.AuthController - Login endpoint called
+2026-02-09 20:14:04 [main] ERROR c.s.c.e.GlobalExceptionHandler - Validation failed: {email=Email should be valid}
+2026-02-09 20:14:04 [main] INFO  c.s.circle.controller.AuthController - Login endpoint called
+2026-02-09 20:14:04 [main] ERROR c.s.c.e.GlobalExceptionHandler - Authentication failed: Invalid credentials
+2026-02-09 20:14:04 [main] INFO  c.s.circle.controller.AuthController - Register endpoint called
+2026-02-09 20:14:05 [main] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Created HttpSession as SecurityContext is non-default
+2026-02-09 20:14:05 [main] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=CustomUserDetails(id=1, username=john@example.com, password=password, active=true), Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[]]] to HttpSession [org.springframework.mock.web.MockHttpSession@6de6baf6]
+2026-02-09 20:14:05 [main] ERROR c.s.c.e.GlobalExceptionHandler - Validation failed: {newPassword=New password must be at least 6 characters}
+2026-02-09 20:14:05 [main] ERROR c.s.c.e.GlobalExceptionHandler - Validation failed: {firstName=First name is required}
+2026-02-09 20:14:05 [main] ERROR c.s.c.e.GlobalExceptionHandler - Validation failed: {password=Password must be at least 6 characters}
+2026-02-09 20:14:05 [main] ERROR c.s.c.e.GlobalExceptionHandler - Validation failed: {username=Username (email or phone) is required}
+2026-02-09 20:14:05 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.susa.circle.CircleApplication for test class com.susa.circle.controller.ContactControllerTest
+2026-02-09 20:14:05 [main] INFO  o.s.b.d.r.RestartApplicationListener - Restart disabled due to context in which it is running
+2026-02-09 20:14:05 [main] INFO  c.s.c.c.ContactControllerTest - Starting ContactControllerTest using Java 25.0.2 with PID 17031 (started by onyxd in /home/onyxd/Downloads/repo/circle)
+2026-02-09 20:14:05 [main] DEBUG c.s.c.c.ContactControllerTest - Running with Spring Boot v4.0.1, Spring v7.0.2
+2026-02-09 20:14:05 [main] INFO  c.s.c.c.ContactControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-02-09 20:14:06 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-02-09 20:14:06 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2026-02-09 20:14:06 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 2 ms
+2026-02-09 20:14:06 [main] INFO  c.s.c.c.ContactControllerTest - Started ContactControllerTest in 0.88 seconds (process running for 10.968)
+2026-02-09 20:14:06 [main] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Created HttpSession as SecurityContext is non-default
+2026-02-09 20:14:06 [main] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=CustomUserDetails(id=1, username=john@example.com, password=password, active=true), Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[]]] to HttpSession [org.springframework.mock.web.MockHttpSession@4ccf7cc6]
+2026-02-09 20:14:06 [main] ERROR c.s.c.e.GlobalExceptionHandler - Validation failed: {emails[0].email=Email should be valid}
+2026-02-09 20:14:06 [main] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Created HttpSession as SecurityContext is non-default
+2026-02-09 20:14:06 [main] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=CustomUserDetails(id=1, username=john@example.com, password=password, active=true), Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[]]] to HttpSession [org.springframework.mock.web.MockHttpSession@16c2da2c]
+2026-02-09 20:14:06 [main] INFO  c.s.c.controller.ContactController - Get contact by id endpoint called
+2026-02-09 20:14:06 [main] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Created HttpSession as SecurityContext is non-default
+2026-02-09 20:14:06 [main] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=CustomUserDetails(id=1, username=john@example.com, password=password, active=true), Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[]]] to HttpSession [org.springframework.mock.web.MockHttpSession@534df4b]
+2026-02-09 20:14:06 [main] ERROR c.s.c.e.GlobalExceptionHandler - Validation failed: {firstName=First name is required}
+2026-02-09 20:14:06 [main] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Created HttpSession as SecurityContext is non-default
+2026-02-09 20:14:06 [main] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=CustomUserDetails(id=1, username=john@example.com, password=password, active=true), Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[]]] to HttpSession [org.springframework.mock.web.MockHttpSession@713c60e0]
+2026-02-09 20:14:06 [main] ERROR c.s.c.e.GlobalExceptionHandler - Validation failed: {firstName=First name is required}
+2026-02-09 20:14:06 [main] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Created HttpSession as SecurityContext is non-default
+2026-02-09 20:14:06 [main] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=CustomUserDetails(id=1, username=john@example.com, password=password, active=true), Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[]]] to HttpSession [org.springframework.mock.web.MockHttpSession@44ca15d7]
+2026-02-09 20:14:06 [main] INFO  c.s.c.controller.ContactController - Delete contact endpoint called
+2026-02-09 20:14:06 [main] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Created HttpSession as SecurityContext is non-default
+2026-02-09 20:14:06 [main] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=CustomUserDetails(id=1, username=john@example.com, password=password, active=true), Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[]]] to HttpSession [org.springframework.mock.web.MockHttpSession@5bc776e2]
+2026-02-09 20:14:06 [main] INFO  c.s.c.controller.ContactController - Update contact endpoint called
+2026-02-09 20:14:06 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.susa.circle.repository.ContactRepositoryTest]: ContactRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-02-09 20:14:06 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.susa.circle.CircleApplication for test class com.susa.circle.repository.ContactRepositoryTest
+2026-02-09 20:14:06 [main] INFO  o.s.b.d.r.RestartApplicationListener - Restart disabled due to context in which it is running
+2026-02-09 20:14:06 [main] INFO  c.s.c.r.ContactRepositoryTest - Starting ContactRepositoryTest using Java 25.0.2 with PID 17031 (started by onyxd in /home/onyxd/Downloads/repo/circle)
+2026-02-09 20:14:06 [main] DEBUG c.s.c.r.ContactRepositoryTest - Running with Spring Boot v4.0.1, Spring v7.0.2
+2026-02-09 20:14:06 [main] INFO  c.s.c.r.ContactRepositoryTest - No active profile set, falling back to 1 default profile: "default"
+2026-02-09 20:14:06 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-09 20:14:06 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 54 ms. Found 2 JPA repository interfaces.
+2026-02-09 20:14:07 [main] INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-02-09 20:14:07 [main] INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.0.Final
+2026-02-09 20:14:07 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-09 20:14:08 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-02-09 20:14:08 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@32b92218
+2026-02-09 20:14:08 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-02-09 20:14:08 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-09 20:14:08 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/contact_management]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.1
+	Default catalog/schema: contact_management/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-09 20:14:10 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-09 20:14:10 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-09 20:14:11 [main] INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-09 20:14:12 [main] INFO  c.s.c.r.ContactRepositoryTest - Started ContactRepositoryTest in 6.462 seconds (process running for 17.896)
+2026-02-09 20:14:13 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (active, created_at, email, first_name, last_name, password, phone_number, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-09 20:14:13 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        contacts
+        (created_at, first_name, last_name, title, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-02-09 20:14:13 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        contacts
+        (created_at, first_name, last_name, title, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-02-09 20:14:13 [main] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id 
+    from
+        contacts c1_0 
+    where
+        c1_0.id=? 
+        and c1_0.user_id=? 
+    fetch
+        first ? rows only
+2026-02-09 20:14:13 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (active, created_at, email, first_name, last_name, password, phone_number, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-09 20:14:13 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        contacts
+        (created_at, first_name, last_name, title, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-02-09 20:14:13 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        contacts
+        (created_at, first_name, last_name, title, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-02-09 20:14:13 [main] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.created_at,
+        c1_0.first_name,
+        c1_0.last_name,
+        c1_0.title,
+        c1_0.updated_at,
+        c1_0.user_id 
+    from
+        contacts c1_0 
+    where
+        c1_0.user_id=? 
+    fetch
+        first ? rows only
+2026-02-09 20:14:13 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (active, created_at, email, first_name, last_name, password, phone_number, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-09 20:14:13 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        contacts
+        (created_at, first_name, last_name, title, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-02-09 20:14:13 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        contacts
+        (created_at, first_name, last_name, title, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-02-09 20:14:13 [main] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.created_at,
+        c1_0.first_name,
+        c1_0.last_name,
+        c1_0.title,
+        c1_0.updated_at,
+        c1_0.user_id 
+    from
+        contacts c1_0 
+    where
+        c1_0.user_id=? 
+        and (
+            lower(c1_0.first_name) like lower(('%'||?||'%')) escape '' 
+            or lower(c1_0.last_name) like lower(('%'||?||'%')) escape ''
+        ) 
+    fetch
+        first ? rows only
+2026-02-09 20:14:13 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (active, created_at, email, first_name, last_name, password, phone_number, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-09 20:14:13 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        contacts
+        (created_at, first_name, last_name, title, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-02-09 20:14:13 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        contacts
+        (created_at, first_name, last_name, title, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-02-09 20:14:13 [main] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.created_at,
+        c1_0.first_name,
+        c1_0.last_name,
+        c1_0.title,
+        c1_0.updated_at,
+        c1_0.user_id 
+    from
+        contacts c1_0 
+    where
+        c1_0.user_id=? 
+        and (
+            lower(c1_0.first_name) like lower(('%'||?||'%')) escape '' 
+            or lower(c1_0.last_name) like lower(('%'||?||'%')) escape ''
+        ) 
+    fetch
+        first ? rows only
+2026-02-09 20:14:13 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (active, created_at, email, first_name, last_name, password, phone_number, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-09 20:14:13 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        contacts
+        (created_at, first_name, last_name, title, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-02-09 20:14:13 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        contacts
+        (created_at, first_name, last_name, title, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-02-09 20:14:13 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (active, created_at, email, first_name, last_name, password, phone_number, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-09 20:14:13 [main] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id 
+    from
+        contacts c1_0 
+    where
+        c1_0.id=? 
+        and c1_0.user_id=? 
+    fetch
+        first ? rows only
+2026-02-09 20:14:13 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (active, created_at, email, first_name, last_name, password, phone_number, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-09 20:14:13 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        contacts
+        (created_at, first_name, last_name, title, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-02-09 20:14:13 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        contacts
+        (created_at, first_name, last_name, title, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-02-09 20:14:13 [main] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.created_at,
+        c1_0.first_name,
+        c1_0.last_name,
+        c1_0.title,
+        c1_0.updated_at,
+        c1_0.user_id 
+    from
+        contacts c1_0 
+    where
+        c1_0.user_id=? 
+        and (
+            lower(c1_0.first_name) like lower(('%'||?||'%')) escape '' 
+            or lower(c1_0.last_name) like lower(('%'||?||'%')) escape ''
+        ) 
+    fetch
+        first ? rows only
+2026-02-09 20:14:13 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (active, created_at, email, first_name, last_name, password, phone_number, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-09 20:14:13 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        contacts
+        (created_at, first_name, last_name, title, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-02-09 20:14:13 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        contacts
+        (created_at, first_name, last_name, title, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-02-09 20:14:13 [main] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id 
+    from
+        contacts c1_0 
+    where
+        c1_0.id=? 
+        and c1_0.user_id=? 
+    fetch
+        first ? rows only
+2026-02-09 20:14:13 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (active, created_at, email, first_name, last_name, password, phone_number, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-09 20:14:13 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        contacts
+        (created_at, first_name, last_name, title, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-02-09 20:14:13 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        contacts
+        (created_at, first_name, last_name, title, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-02-09 20:14:13 [main] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.created_at,
+        c1_0.first_name,
+        c1_0.last_name,
+        c1_0.title,
+        c1_0.updated_at,
+        c1_0.user_id 
+    from
+        contacts c1_0 
+    where
+        c1_0.user_id=? 
+        and (
+            lower(c1_0.first_name) like lower(('%'||?||'%')) escape '' 
+            or lower(c1_0.last_name) like lower(('%'||?||'%')) escape ''
+        ) 
+    fetch
+        first ? rows only
+2026-02-09 20:14:13 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.susa.circle.repository.UserRepositoryTest]: UserRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-02-09 20:14:13 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.susa.circle.CircleApplication for test class com.susa.circle.repository.UserRepositoryTest
+2026-02-09 20:14:13 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (active, created_at, email, first_name, last_name, password, phone_number, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-09 20:14:13 [main] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.email=? 
+    fetch
+        first ? rows only
+2026-02-09 20:14:13 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (active, created_at, email, first_name, last_name, password, phone_number, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-09 20:14:13 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (active, created_at, email, first_name, last_name, password, phone_number, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-09 20:14:13 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (active, created_at, email, first_name, last_name, password, phone_number, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-09 20:14:13 [main] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.active,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.last_name,
+        u1_0.password,
+        u1_0.phone_number,
+        u1_0.updated_at 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-09 20:14:13 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (active, created_at, email, first_name, last_name, password, phone_number, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-09 20:14:13 [main] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.active,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.last_name,
+        u1_0.password,
+        u1_0.phone_number,
+        u1_0.updated_at 
+    from
+        users u1_0 
+    where
+        u1_0.phone_number=?
+2026-02-09 20:14:13 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (active, created_at, email, first_name, last_name, password, phone_number, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-09 20:14:13 [main] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.phone_number=? 
+    fetch
+        first ? rows only
+2026-02-09 20:14:13 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (active, created_at, email, first_name, last_name, password, phone_number, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-09 20:14:13 [main] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.active,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.last_name,
+        u1_0.password,
+        u1_0.phone_number,
+        u1_0.updated_at 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-09 20:14:13 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (active, created_at, email, first_name, last_name, password, phone_number, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-09 20:14:13 [main] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.phone_number=? 
+    fetch
+        first ? rows only
+2026-02-09 20:14:13 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (active, created_at, email, first_name, last_name, password, phone_number, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-09 20:14:13 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (active, created_at, email, first_name, last_name, password, phone_number, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-09 20:14:13 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (active, created_at, email, first_name, last_name, password, phone_number, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-09 20:14:13 [main] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.active,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.last_name,
+        u1_0.password,
+        u1_0.phone_number,
+        u1_0.updated_at 
+    from
+        users u1_0 
+    where
+        u1_0.phone_number=?
+2026-02-09 20:14:13 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (active, created_at, email, first_name, last_name, password, phone_number, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-09 20:14:13 [main] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.email=? 
+    fetch
+        first ? rows only
+2026-02-09 20:14:13 [main] ERROR com.susa.circle.security.JwtUtil - Token validation failed: Malformed protected header JSON: Unable to deserialize: Unexpected character ('�' (code 65533 / 0xfffd)): expected a valid value (JSON String, Number, Array, Object or token 'null', 'true' or 'false')
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 1]
+2026-02-09 20:14:13 [main] ERROR com.susa.circle.security.JwtUtil - Token validation failed: JWT expired 847 milliseconds ago at 2026-02-09T15:14:13.000Z. Current time: 2026-02-09T15:14:13.847Z. Allowed clock skew: 0 milliseconds.
+2026-02-09 20:14:14 [main] INFO  com.susa.circle.service.AuthService - Attempting to change password for user id: 1
+2026-02-09 20:14:14 [main] INFO  com.susa.circle.service.AuthService - Attempting to change password for user id: 1
+2026-02-09 20:14:14 [main] INFO  com.susa.circle.service.AuthService - Password changed successfully for user id: 1
+2026-02-09 20:14:14 [main] INFO  com.susa.circle.service.AuthService - Attempting to login user: john@example.com
+2026-02-09 20:14:14 [main] INFO  com.susa.circle.service.AuthService - User logged in successfully: john@example.com
+2026-02-09 20:14:14 [main] INFO  com.susa.circle.service.AuthService - Attempting to login user: john@example.com
+2026-02-09 20:14:14 [main] DEBUG com.susa.circle.service.AuthService - Fetching user profile for id: 1
+2026-02-09 20:14:14 [main] DEBUG com.susa.circle.service.AuthService - Fetching user profile for id: 1
+2026-02-09 20:14:14 [main] INFO  com.susa.circle.service.AuthService - Attempting to change password for user id: 1
+2026-02-09 20:14:14 [main] INFO  com.susa.circle.service.AuthService - Attempting to register user with email: john@example.com or phone: +1234567890
+2026-02-09 20:14:14 [main] INFO  com.susa.circle.service.AuthService - User registered successfully with id: 1
+2026-02-09 20:14:14 [main] INFO  com.susa.circle.service.AuthService - Attempting to register user with email: john@example.com or phone: +1234567890
+2026-02-09 20:14:14 [main] INFO  com.susa.circle.service.AuthService - Attempting to register user with email: john@example.com or phone: +1234567890
+2026-02-09 20:14:14 [main] INFO  c.susa.circle.service.ContactService - Deleting contact id: 1 for user id: 1
+2026-02-09 20:14:14 [main] DEBUG c.susa.circle.service.ContactService - Fetching contacts for user id: 1
+2026-02-09 20:14:14 [main] INFO  c.susa.circle.service.ContactService - Creating contact for user id: 1
+2026-02-09 20:14:14 [main] DEBUG c.susa.circle.service.ContactService - Fetching contact id: 1 for user id: 1
+2026-02-09 20:14:14 [main] INFO  c.susa.circle.service.ContactService - Deleting contact id: 1 for user id: 1
+2026-02-09 20:14:14 [main] INFO  c.susa.circle.service.ContactService - Updating contact id: 1 for user id: 1
+2026-02-09 20:14:14 [main] DEBUG c.susa.circle.service.ContactService - Fetching contact id: 1 for user id: 1
+2026-02-09 20:14:14 [main] DEBUG c.susa.circle.service.ContactService - Searching contacts for user id: 1 with search term: jane
+2026-02-09 20:14:14 [main] INFO  c.susa.circle.service.ContactService - Updating contact id: 1 for user id: 1
+2026-02-09 20:14:14 [main] INFO  c.susa.circle.service.ContactService - Deleting contact id: 1 for user id: 1
+2026-02-09 20:14:14 [main] INFO  c.susa.circle.service.ContactService - Contact deleted successfully with id: 1
+2026-02-09 20:14:14 [main] INFO  c.susa.circle.service.ContactService - Creating contact for user id: 1
+2026-02-09 20:14:14 [main] INFO  c.susa.circle.service.ContactService - Contact created successfully with id: 1
+2026-02-09 20:14:14 [main] DEBUG c.susa.circle.service.ContactService - Fetching contact id: 1 for user id: 1
+2026-02-09 20:14:14 [main] INFO  c.susa.circle.service.ContactService - Updating contact id: 1 for user id: 1
+2026-02-09 20:14:14 [main] INFO  c.susa.circle.service.ContactService - Contact updated successfully with id: 1
+2026-02-09 20:14:14 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.susa.circle.CircleApplicationTests]: CircleApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-02-09 20:14:14 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.susa.circle.CircleApplication for test class com.susa.circle.CircleApplicationTests
+2026-02-09 20:14:14 [main] INFO  o.s.b.d.r.RestartApplicationListener - Restart disabled due to context in which it is running
+2026-02-09 20:14:14 [main] INFO  c.susa.circle.CircleApplicationTests - Starting CircleApplicationTests using Java 25.0.2 with PID 17031 (started by onyxd in /home/onyxd/Downloads/repo/circle)
+2026-02-09 20:14:14 [main] DEBUG c.susa.circle.CircleApplicationTests - Running with Spring Boot v4.0.1, Spring v7.0.2
+2026-02-09 20:14:14 [main] INFO  c.susa.circle.CircleApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2026-02-09 20:14:14 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-09 20:14:14 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 2 JPA repository interfaces.
+2026-02-09 20:14:15 [main] INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-02-09 20:14:15 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-09 20:14:15 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2026-02-09 20:14:15 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@72a04649
+2026-02-09 20:14:15 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2026-02-09 20:14:15 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-09 20:14:15 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/contact_management]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.1
+	Default catalog/schema: contact_management/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-09 20:14:15 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-09 20:14:15 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-09 20:14:15 [main] INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-02-09 20:14:15 [main] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-02-09 20:14:15 [main] DEBUG o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-02-09 20:14:16 [main] INFO  c.susa.circle.CircleApplicationTests - Started CircleApplicationTests in 1.646 seconds (process running for 21.179)
+2026-02-09 20:14:16 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-09 20:14:16 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-02-09 20:14:16 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-02-09 20:14:16 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-09 20:14:16 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2026-02-09 20:14:16 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2026-02-09 20:15:33 [main] INFO  c.s.c.controller.AuthControllerTest - Starting AuthControllerTest using Java 25.0.2 with PID 17354 (started by onyxd in /home/onyxd/Downloads/repo/circle)
+2026-02-09 20:15:33 [main] DEBUG c.s.c.controller.AuthControllerTest - Running with Spring Boot v4.0.1, Spring v7.0.2
+2026-02-09 20:15:33 [main] INFO  c.s.c.controller.AuthControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-02-09 20:15:37 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-02-09 20:15:37 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2026-02-09 20:15:37 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 3 ms
+2026-02-09 20:15:37 [main] INFO  c.s.c.controller.AuthControllerTest - Started AuthControllerTest in 5.099 seconds (process running for 8.199)
+2026-02-09 20:15:38 [main] INFO  c.s.circle.controller.AuthController - Login endpoint called
+2026-02-09 20:15:38 [main] ERROR c.s.c.e.GlobalExceptionHandler - Validation failed: {email=Email should be valid}
+2026-02-09 20:15:38 [main] INFO  c.s.circle.controller.AuthController - Login endpoint called
+2026-02-09 20:15:38 [main] ERROR c.s.c.e.GlobalExceptionHandler - Authentication failed: Invalid credentials
+2026-02-09 20:15:38 [main] INFO  c.s.circle.controller.AuthController - Register endpoint called
+2026-02-09 20:15:38 [main] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Created HttpSession as SecurityContext is non-default
+2026-02-09 20:15:38 [main] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=CustomUserDetails(id=1, username=john@example.com, password=password, active=true), Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[]]] to HttpSession [org.springframework.mock.web.MockHttpSession@66257bec]
+2026-02-09 20:15:38 [main] ERROR c.s.c.e.GlobalExceptionHandler - Validation failed: {newPassword=New password must be at least 6 characters}
+2026-02-09 20:15:38 [main] ERROR c.s.c.e.GlobalExceptionHandler - Validation failed: {firstName=First name is required}
+2026-02-09 20:15:38 [main] ERROR c.s.c.e.GlobalExceptionHandler - Validation failed: {password=Password must be at least 6 characters}
+2026-02-09 20:15:38 [main] ERROR c.s.c.e.GlobalExceptionHandler - Validation failed: {username=Username (email or phone) is required}
+2026-02-09 20:15:38 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.susa.circle.CircleApplication for test class com.susa.circle.controller.ContactControllerTest
+2026-02-09 20:15:38 [main] INFO  o.s.b.d.r.RestartApplicationListener - Restart disabled due to context in which it is running
+2026-02-09 20:15:38 [main] INFO  c.s.c.c.ContactControllerTest - Starting ContactControllerTest using Java 25.0.2 with PID 17354 (started by onyxd in /home/onyxd/Downloads/repo/circle)
+2026-02-09 20:15:38 [main] DEBUG c.s.c.c.ContactControllerTest - Running with Spring Boot v4.0.1, Spring v7.0.2
+2026-02-09 20:15:38 [main] INFO  c.s.c.c.ContactControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-02-09 20:15:39 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-02-09 20:15:39 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2026-02-09 20:15:39 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 2 ms
+2026-02-09 20:15:39 [main] INFO  c.s.c.c.ContactControllerTest - Started ContactControllerTest in 0.653 seconds (process running for 9.911)
+2026-02-09 20:15:39 [main] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Created HttpSession as SecurityContext is non-default
+2026-02-09 20:15:39 [main] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=CustomUserDetails(id=1, username=john@example.com, password=password, active=true), Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[]]] to HttpSession [org.springframework.mock.web.MockHttpSession@60e50c6]
+2026-02-09 20:15:39 [main] ERROR c.s.c.e.GlobalExceptionHandler - Validation failed: {emails[0].email=Email should be valid}
+2026-02-09 20:15:39 [main] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Created HttpSession as SecurityContext is non-default
+2026-02-09 20:15:39 [main] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=CustomUserDetails(id=1, username=john@example.com, password=password, active=true), Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[]]] to HttpSession [org.springframework.mock.web.MockHttpSession@13c33a3d]
+2026-02-09 20:15:39 [main] INFO  c.s.c.controller.ContactController - Get contact by id endpoint called
+2026-02-09 20:15:39 [main] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Created HttpSession as SecurityContext is non-default
+2026-02-09 20:15:39 [main] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=CustomUserDetails(id=1, username=john@example.com, password=password, active=true), Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[]]] to HttpSession [org.springframework.mock.web.MockHttpSession@6557b61f]
+2026-02-09 20:15:39 [main] ERROR c.s.c.e.GlobalExceptionHandler - Validation failed: {firstName=First name is required}
+2026-02-09 20:15:39 [main] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Created HttpSession as SecurityContext is non-default
+2026-02-09 20:15:39 [main] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=CustomUserDetails(id=1, username=john@example.com, password=password, active=true), Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[]]] to HttpSession [org.springframework.mock.web.MockHttpSession@4679df4b]
+2026-02-09 20:15:39 [main] ERROR c.s.c.e.GlobalExceptionHandler - Validation failed: {firstName=First name is required}
+2026-02-09 20:15:39 [main] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Created HttpSession as SecurityContext is non-default
+2026-02-09 20:15:39 [main] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=CustomUserDetails(id=1, username=john@example.com, password=password, active=true), Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[]]] to HttpSession [org.springframework.mock.web.MockHttpSession@641af961]
+2026-02-09 20:15:39 [main] INFO  c.s.c.controller.ContactController - Delete contact endpoint called
+2026-02-09 20:15:39 [main] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Created HttpSession as SecurityContext is non-default
+2026-02-09 20:15:39 [main] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=CustomUserDetails(id=1, username=john@example.com, password=password, active=true), Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[]]] to HttpSession [org.springframework.mock.web.MockHttpSession@be74f53]
+2026-02-09 20:15:39 [main] INFO  c.s.c.controller.ContactController - Update contact endpoint called
+2026-02-09 20:15:39 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.susa.circle.repository.ContactRepositoryTest]: ContactRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-02-09 20:15:39 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.susa.circle.CircleApplication for test class com.susa.circle.repository.ContactRepositoryTest
+2026-02-09 20:15:39 [main] INFO  o.s.b.d.r.RestartApplicationListener - Restart disabled due to context in which it is running
+2026-02-09 20:15:39 [main] INFO  c.s.c.r.ContactRepositoryTest - Starting ContactRepositoryTest using Java 25.0.2 with PID 17354 (started by onyxd in /home/onyxd/Downloads/repo/circle)
+2026-02-09 20:15:39 [main] DEBUG c.s.c.r.ContactRepositoryTest - Running with Spring Boot v4.0.1, Spring v7.0.2
+2026-02-09 20:15:39 [main] INFO  c.s.c.r.ContactRepositoryTest - No active profile set, falling back to 1 default profile: "default"
+2026-02-09 20:15:39 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-09 20:15:40 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 50 ms. Found 2 JPA repository interfaces.
+2026-02-09 20:15:40 [main] INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-02-09 20:15:40 [main] INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.0.Final
+2026-02-09 20:15:41 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-09 20:15:41 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-02-09 20:15:41 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1a4323ac
+2026-02-09 20:15:41 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-02-09 20:15:41 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-09 20:15:41 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/contact_management]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.1
+	Default catalog/schema: contact_management/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-09 20:15:43 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-09 20:15:43 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-09 20:15:43 [main] INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-09 20:15:45 [main] INFO  c.s.c.r.ContactRepositoryTest - Started ContactRepositoryTest in 6.286 seconds (process running for 16.586)
+2026-02-09 20:15:46 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (active, created_at, email, first_name, last_name, password, phone_number, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-09 20:15:46 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        contacts
+        (created_at, first_name, last_name, title, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-02-09 20:15:46 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        contacts
+        (created_at, first_name, last_name, title, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-02-09 20:15:46 [main] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id 
+    from
+        contacts c1_0 
+    where
+        c1_0.id=? 
+        and c1_0.user_id=? 
+    fetch
+        first ? rows only
+2026-02-09 20:15:46 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (active, created_at, email, first_name, last_name, password, phone_number, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-09 20:15:46 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        contacts
+        (created_at, first_name, last_name, title, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-02-09 20:15:46 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        contacts
+        (created_at, first_name, last_name, title, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-02-09 20:15:46 [main] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.created_at,
+        c1_0.first_name,
+        c1_0.last_name,
+        c1_0.title,
+        c1_0.updated_at,
+        c1_0.user_id 
+    from
+        contacts c1_0 
+    where
+        c1_0.user_id=? 
+    fetch
+        first ? rows only
+2026-02-09 20:15:46 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (active, created_at, email, first_name, last_name, password, phone_number, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-09 20:15:46 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        contacts
+        (created_at, first_name, last_name, title, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-02-09 20:15:46 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        contacts
+        (created_at, first_name, last_name, title, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-02-09 20:15:46 [main] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.created_at,
+        c1_0.first_name,
+        c1_0.last_name,
+        c1_0.title,
+        c1_0.updated_at,
+        c1_0.user_id 
+    from
+        contacts c1_0 
+    where
+        c1_0.user_id=? 
+        and (
+            lower(c1_0.first_name) like lower(('%'||?||'%')) escape '' 
+            or lower(c1_0.last_name) like lower(('%'||?||'%')) escape ''
+        ) 
+    fetch
+        first ? rows only
+2026-02-09 20:15:46 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (active, created_at, email, first_name, last_name, password, phone_number, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-09 20:15:46 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        contacts
+        (created_at, first_name, last_name, title, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-02-09 20:15:46 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        contacts
+        (created_at, first_name, last_name, title, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-02-09 20:15:46 [main] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.created_at,
+        c1_0.first_name,
+        c1_0.last_name,
+        c1_0.title,
+        c1_0.updated_at,
+        c1_0.user_id 
+    from
+        contacts c1_0 
+    where
+        c1_0.user_id=? 
+        and (
+            lower(c1_0.first_name) like lower(('%'||?||'%')) escape '' 
+            or lower(c1_0.last_name) like lower(('%'||?||'%')) escape ''
+        ) 
+    fetch
+        first ? rows only
+2026-02-09 20:15:46 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (active, created_at, email, first_name, last_name, password, phone_number, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-09 20:15:46 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        contacts
+        (created_at, first_name, last_name, title, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-02-09 20:15:46 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        contacts
+        (created_at, first_name, last_name, title, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-02-09 20:15:46 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (active, created_at, email, first_name, last_name, password, phone_number, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-09 20:15:46 [main] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id 
+    from
+        contacts c1_0 
+    where
+        c1_0.id=? 
+        and c1_0.user_id=? 
+    fetch
+        first ? rows only
+2026-02-09 20:15:46 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (active, created_at, email, first_name, last_name, password, phone_number, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-09 20:15:46 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        contacts
+        (created_at, first_name, last_name, title, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-02-09 20:15:46 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        contacts
+        (created_at, first_name, last_name, title, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-02-09 20:15:46 [main] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.created_at,
+        c1_0.first_name,
+        c1_0.last_name,
+        c1_0.title,
+        c1_0.updated_at,
+        c1_0.user_id 
+    from
+        contacts c1_0 
+    where
+        c1_0.user_id=? 
+        and (
+            lower(c1_0.first_name) like lower(('%'||?||'%')) escape '' 
+            or lower(c1_0.last_name) like lower(('%'||?||'%')) escape ''
+        ) 
+    fetch
+        first ? rows only
+2026-02-09 20:15:46 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (active, created_at, email, first_name, last_name, password, phone_number, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-09 20:15:46 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        contacts
+        (created_at, first_name, last_name, title, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-02-09 20:15:46 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        contacts
+        (created_at, first_name, last_name, title, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-02-09 20:15:46 [main] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id 
+    from
+        contacts c1_0 
+    where
+        c1_0.id=? 
+        and c1_0.user_id=? 
+    fetch
+        first ? rows only
+2026-02-09 20:15:46 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (active, created_at, email, first_name, last_name, password, phone_number, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-09 20:15:46 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        contacts
+        (created_at, first_name, last_name, title, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-02-09 20:15:46 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        contacts
+        (created_at, first_name, last_name, title, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-02-09 20:15:46 [main] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.created_at,
+        c1_0.first_name,
+        c1_0.last_name,
+        c1_0.title,
+        c1_0.updated_at,
+        c1_0.user_id 
+    from
+        contacts c1_0 
+    where
+        c1_0.user_id=? 
+        and (
+            lower(c1_0.first_name) like lower(('%'||?||'%')) escape '' 
+            or lower(c1_0.last_name) like lower(('%'||?||'%')) escape ''
+        ) 
+    fetch
+        first ? rows only
+2026-02-09 20:15:46 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.susa.circle.repository.UserRepositoryTest]: UserRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-02-09 20:15:46 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.susa.circle.CircleApplication for test class com.susa.circle.repository.UserRepositoryTest
+2026-02-09 20:15:46 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (active, created_at, email, first_name, last_name, password, phone_number, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-09 20:15:46 [main] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.email=? 
+    fetch
+        first ? rows only
+2026-02-09 20:15:46 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (active, created_at, email, first_name, last_name, password, phone_number, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-09 20:15:46 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (active, created_at, email, first_name, last_name, password, phone_number, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-09 20:15:46 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (active, created_at, email, first_name, last_name, password, phone_number, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-09 20:15:46 [main] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.active,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.last_name,
+        u1_0.password,
+        u1_0.phone_number,
+        u1_0.updated_at 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-09 20:15:46 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (active, created_at, email, first_name, last_name, password, phone_number, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-09 20:15:46 [main] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.active,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.last_name,
+        u1_0.password,
+        u1_0.phone_number,
+        u1_0.updated_at 
+    from
+        users u1_0 
+    where
+        u1_0.phone_number=?
+2026-02-09 20:15:46 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (active, created_at, email, first_name, last_name, password, phone_number, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-09 20:15:46 [main] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.phone_number=? 
+    fetch
+        first ? rows only
+2026-02-09 20:15:46 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (active, created_at, email, first_name, last_name, password, phone_number, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-09 20:15:46 [main] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.active,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.last_name,
+        u1_0.password,
+        u1_0.phone_number,
+        u1_0.updated_at 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-09 20:15:46 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (active, created_at, email, first_name, last_name, password, phone_number, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-09 20:15:46 [main] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.phone_number=? 
+    fetch
+        first ? rows only
+2026-02-09 20:15:46 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (active, created_at, email, first_name, last_name, password, phone_number, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-09 20:15:46 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (active, created_at, email, first_name, last_name, password, phone_number, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-09 20:15:46 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (active, created_at, email, first_name, last_name, password, phone_number, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-09 20:15:46 [main] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.active,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.last_name,
+        u1_0.password,
+        u1_0.phone_number,
+        u1_0.updated_at 
+    from
+        users u1_0 
+    where
+        u1_0.phone_number=?
+2026-02-09 20:15:46 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (active, created_at, email, first_name, last_name, password, phone_number, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-09 20:15:46 [main] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.email=? 
+    fetch
+        first ? rows only
+2026-02-09 20:15:46 [main] ERROR com.susa.circle.security.JwtUtil - Token validation failed: Malformed protected header JSON: Unable to deserialize: Unexpected character ('�' (code 65533 / 0xfffd)): expected a valid value (JSON String, Number, Array, Object or token 'null', 'true' or 'false')
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 1]
+2026-02-09 20:15:47 [main] ERROR com.susa.circle.security.JwtUtil - Token validation failed: JWT expired 1065 milliseconds ago at 2026-02-09T15:15:46.000Z. Current time: 2026-02-09T15:15:47.065Z. Allowed clock skew: 0 milliseconds.
+2026-02-09 20:15:47 [main] INFO  com.susa.circle.service.AuthService - Attempting to change password for user id: 1
+2026-02-09 20:15:47 [main] INFO  com.susa.circle.service.AuthService - Attempting to change password for user id: 1
+2026-02-09 20:15:47 [main] INFO  com.susa.circle.service.AuthService - Password changed successfully for user id: 1
+2026-02-09 20:15:47 [main] INFO  com.susa.circle.service.AuthService - Attempting to login user: john@example.com
+2026-02-09 20:15:47 [main] INFO  com.susa.circle.service.AuthService - User logged in successfully: john@example.com
+2026-02-09 20:15:47 [main] INFO  com.susa.circle.service.AuthService - Attempting to login user: john@example.com
+2026-02-09 20:15:47 [main] DEBUG com.susa.circle.service.AuthService - Fetching user profile for id: 1
+2026-02-09 20:15:47 [main] DEBUG com.susa.circle.service.AuthService - Fetching user profile for id: 1
+2026-02-09 20:15:47 [main] INFO  com.susa.circle.service.AuthService - Attempting to change password for user id: 1
+2026-02-09 20:15:47 [main] INFO  com.susa.circle.service.AuthService - Attempting to register user with email: john@example.com or phone: +1234567890
+2026-02-09 20:15:47 [main] INFO  com.susa.circle.service.AuthService - User registered successfully with id: 1
+2026-02-09 20:15:47 [main] INFO  com.susa.circle.service.AuthService - Attempting to register user with email: john@example.com or phone: +1234567890
+2026-02-09 20:15:47 [main] INFO  com.susa.circle.service.AuthService - Attempting to register user with email: john@example.com or phone: +1234567890
+2026-02-09 20:15:47 [main] INFO  c.susa.circle.service.ContactService - Deleting contact id: 1 for user id: 1
+2026-02-09 20:15:47 [main] DEBUG c.susa.circle.service.ContactService - Fetching contacts for user id: 1
+2026-02-09 20:15:47 [main] INFO  c.susa.circle.service.ContactService - Creating contact for user id: 1
+2026-02-09 20:15:47 [main] DEBUG c.susa.circle.service.ContactService - Fetching contact id: 1 for user id: 1
+2026-02-09 20:15:48 [main] INFO  c.susa.circle.service.ContactService - Deleting contact id: 1 for user id: 1
+2026-02-09 20:15:48 [main] INFO  c.susa.circle.service.ContactService - Updating contact id: 1 for user id: 1
+2026-02-09 20:15:48 [main] DEBUG c.susa.circle.service.ContactService - Fetching contact id: 1 for user id: 1
+2026-02-09 20:15:48 [main] DEBUG c.susa.circle.service.ContactService - Searching contacts for user id: 1 with search term: jane
+2026-02-09 20:15:48 [main] INFO  c.susa.circle.service.ContactService - Updating contact id: 1 for user id: 1
+2026-02-09 20:15:48 [main] INFO  c.susa.circle.service.ContactService - Deleting contact id: 1 for user id: 1
+2026-02-09 20:15:48 [main] INFO  c.susa.circle.service.ContactService - Contact deleted successfully with id: 1
+2026-02-09 20:15:48 [main] INFO  c.susa.circle.service.ContactService - Creating contact for user id: 1
+2026-02-09 20:15:48 [main] INFO  c.susa.circle.service.ContactService - Contact created successfully with id: 1
+2026-02-09 20:15:48 [main] DEBUG c.susa.circle.service.ContactService - Fetching contact id: 1 for user id: 1
+2026-02-09 20:15:48 [main] INFO  c.susa.circle.service.ContactService - Updating contact id: 1 for user id: 1
+2026-02-09 20:15:48 [main] INFO  c.susa.circle.service.ContactService - Contact updated successfully with id: 1
+2026-02-09 20:15:48 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.susa.circle.CircleApplicationTests]: CircleApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-02-09 20:15:48 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.susa.circle.CircleApplication for test class com.susa.circle.CircleApplicationTests
+2026-02-09 20:15:48 [main] INFO  o.s.b.d.r.RestartApplicationListener - Restart disabled due to context in which it is running
+2026-02-09 20:15:48 [main] INFO  c.susa.circle.CircleApplicationTests - Starting CircleApplicationTests using Java 25.0.2 with PID 17354 (started by onyxd in /home/onyxd/Downloads/repo/circle)
+2026-02-09 20:15:48 [main] DEBUG c.susa.circle.CircleApplicationTests - Running with Spring Boot v4.0.1, Spring v7.0.2
+2026-02-09 20:15:48 [main] INFO  c.susa.circle.CircleApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2026-02-09 20:15:48 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-09 20:15:48 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 2 JPA repository interfaces.
+2026-02-09 20:15:48 [main] INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-02-09 20:15:48 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-09 20:15:48 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2026-02-09 20:15:48 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@695e5ec8
+2026-02-09 20:15:48 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2026-02-09 20:15:48 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-09 20:15:48 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/contact_management]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.1
+	Default catalog/schema: contact_management/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-09 20:15:48 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-09 20:15:49 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-09 20:15:49 [main] INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-02-09 20:15:49 [main] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-02-09 20:15:49 [main] DEBUG o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-02-09 20:15:50 [main] INFO  c.susa.circle.CircleApplicationTests - Started CircleApplicationTests in 1.973 seconds (process running for 20.643)
+2026-02-09 20:15:50 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-09 20:15:50 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-02-09 20:15:50 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-02-09 20:15:50 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-09 20:15:50 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2026-02-09 20:15:50 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2026-02-09 20:20:07 [main] INFO  c.s.c.controller.AuthControllerTest - Starting AuthControllerTest using Java 25.0.2 with PID 17850 (started by onyxd in /home/onyxd/Downloads/repo/circle)
+2026-02-09 20:20:07 [main] DEBUG c.s.c.controller.AuthControllerTest - Running with Spring Boot v4.0.1, Spring v7.0.2
+2026-02-09 20:20:07 [main] INFO  c.s.c.controller.AuthControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-02-09 20:20:12 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-02-09 20:20:12 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2026-02-09 20:20:12 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 3 ms
+2026-02-09 20:20:12 [main] INFO  c.s.c.controller.AuthControllerTest - Started AuthControllerTest in 5.334 seconds (process running for 8.076)
+2026-02-09 20:20:12 [main] INFO  c.s.circle.controller.AuthController - Login endpoint called
+2026-02-09 20:20:13 [main] ERROR c.s.c.e.GlobalExceptionHandler - Validation failed: {email=Email should be valid}
+2026-02-09 20:20:13 [main] INFO  c.s.circle.controller.AuthController - Login endpoint called
+2026-02-09 20:20:13 [main] ERROR c.s.c.e.GlobalExceptionHandler - Authentication failed: Invalid credentials
+2026-02-09 20:20:13 [main] INFO  c.s.circle.controller.AuthController - Register endpoint called
+2026-02-09 20:20:13 [main] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Created HttpSession as SecurityContext is non-default
+2026-02-09 20:20:13 [main] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=CustomUserDetails(id=1, username=john@example.com, password=password, active=true), Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[]]] to HttpSession [org.springframework.mock.web.MockHttpSession@76b36d98]
+2026-02-09 20:20:13 [main] ERROR c.s.c.e.GlobalExceptionHandler - Validation failed: {newPassword=New password must be at least 6 characters}
+2026-02-09 20:20:13 [main] ERROR c.s.c.e.GlobalExceptionHandler - Validation failed: {firstName=First name is required}
+2026-02-09 20:20:13 [main] ERROR c.s.c.e.GlobalExceptionHandler - Validation failed: {password=Password must be at least 6 characters}
+2026-02-09 20:20:13 [main] ERROR c.s.c.e.GlobalExceptionHandler - Validation failed: {username=Username (email or phone) is required}
+2026-02-09 20:20:13 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.susa.circle.CircleApplication for test class com.susa.circle.controller.ContactControllerTest
+2026-02-09 20:20:13 [main] INFO  o.s.b.d.r.RestartApplicationListener - Restart disabled due to context in which it is running
+2026-02-09 20:20:13 [main] INFO  c.s.c.c.ContactControllerTest - Starting ContactControllerTest using Java 25.0.2 with PID 17850 (started by onyxd in /home/onyxd/Downloads/repo/circle)
+2026-02-09 20:20:13 [main] DEBUG c.s.c.c.ContactControllerTest - Running with Spring Boot v4.0.1, Spring v7.0.2
+2026-02-09 20:20:13 [main] INFO  c.s.c.c.ContactControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-02-09 20:20:14 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-02-09 20:20:14 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2026-02-09 20:20:14 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 2 ms
+2026-02-09 20:20:14 [main] INFO  c.s.c.c.ContactControllerTest - Started ContactControllerTest in 0.771 seconds (process running for 10.054)
+2026-02-09 20:20:14 [main] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Created HttpSession as SecurityContext is non-default
+2026-02-09 20:20:14 [main] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=CustomUserDetails(id=1, username=john@example.com, password=password, active=true), Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[]]] to HttpSession [org.springframework.mock.web.MockHttpSession@4fc1edc3]
+2026-02-09 20:20:14 [main] ERROR c.s.c.e.GlobalExceptionHandler - Validation failed: {emails[0].email=Email should be valid}
+2026-02-09 20:20:14 [main] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Created HttpSession as SecurityContext is non-default
+2026-02-09 20:20:14 [main] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=CustomUserDetails(id=1, username=john@example.com, password=password, active=true), Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[]]] to HttpSession [org.springframework.mock.web.MockHttpSession@489b0369]
+2026-02-09 20:20:14 [main] INFO  c.s.c.controller.ContactController - Get contact by id endpoint called
+2026-02-09 20:20:14 [main] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Created HttpSession as SecurityContext is non-default
+2026-02-09 20:20:14 [main] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=CustomUserDetails(id=1, username=john@example.com, password=password, active=true), Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[]]] to HttpSession [org.springframework.mock.web.MockHttpSession@c297e12]
+2026-02-09 20:20:14 [main] ERROR c.s.c.e.GlobalExceptionHandler - Validation failed: {firstName=First name must be between 2 and 100 characters}
+2026-02-09 20:20:14 [main] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Created HttpSession as SecurityContext is non-default
+2026-02-09 20:20:14 [main] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=CustomUserDetails(id=1, username=john@example.com, password=password, active=true), Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[]]] to HttpSession [org.springframework.mock.web.MockHttpSession@c032c75]
+2026-02-09 20:20:14 [main] ERROR c.s.c.e.GlobalExceptionHandler - Validation failed: {firstName=First name is required}
+2026-02-09 20:20:14 [main] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Created HttpSession as SecurityContext is non-default
+2026-02-09 20:20:14 [main] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=CustomUserDetails(id=1, username=john@example.com, password=password, active=true), Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[]]] to HttpSession [org.springframework.mock.web.MockHttpSession@4cf7e832]
+2026-02-09 20:20:14 [main] INFO  c.s.c.controller.ContactController - Delete contact endpoint called
+2026-02-09 20:20:14 [main] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Created HttpSession as SecurityContext is non-default
+2026-02-09 20:20:14 [main] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=CustomUserDetails(id=1, username=john@example.com, password=password, active=true), Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[]]] to HttpSession [org.springframework.mock.web.MockHttpSession@7e9ad6d]
+2026-02-09 20:20:14 [main] INFO  c.s.c.controller.ContactController - Update contact endpoint called
+2026-02-09 20:20:14 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.susa.circle.repository.ContactRepositoryTest]: ContactRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-02-09 20:20:14 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.susa.circle.CircleApplication for test class com.susa.circle.repository.ContactRepositoryTest
+2026-02-09 20:20:14 [main] INFO  o.s.b.d.r.RestartApplicationListener - Restart disabled due to context in which it is running
+2026-02-09 20:20:14 [main] INFO  c.s.c.r.ContactRepositoryTest - Starting ContactRepositoryTest using Java 25.0.2 with PID 17850 (started by onyxd in /home/onyxd/Downloads/repo/circle)
+2026-02-09 20:20:14 [main] DEBUG c.s.c.r.ContactRepositoryTest - Running with Spring Boot v4.0.1, Spring v7.0.2
+2026-02-09 20:20:14 [main] INFO  c.s.c.r.ContactRepositoryTest - No active profile set, falling back to 1 default profile: "default"
+2026-02-09 20:20:14 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-09 20:20:14 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 55 ms. Found 2 JPA repository interfaces.
+2026-02-09 20:20:15 [main] INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-02-09 20:20:15 [main] INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.0.Final
+2026-02-09 20:20:16 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-09 20:20:16 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-02-09 20:20:16 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@da92bf7
+2026-02-09 20:20:16 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-02-09 20:20:16 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-09 20:20:16 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/contact_management]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.1
+	Default catalog/schema: contact_management/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-09 20:20:18 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-09 20:20:18 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-09 20:20:18 [main] INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-09 20:20:20 [main] INFO  c.s.c.r.ContactRepositoryTest - Started ContactRepositoryTest in 6.445 seconds (process running for 16.949)
+2026-02-09 20:20:21 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (active, created_at, email, first_name, last_name, password, phone_number, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-09 20:20:21 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        contacts
+        (created_at, first_name, last_name, title, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-02-09 20:20:21 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        contacts
+        (created_at, first_name, last_name, title, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-02-09 20:20:21 [main] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id 
+    from
+        contacts c1_0 
+    where
+        c1_0.id=? 
+        and c1_0.user_id=? 
+    fetch
+        first ? rows only
+2026-02-09 20:20:21 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (active, created_at, email, first_name, last_name, password, phone_number, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-09 20:20:21 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        contacts
+        (created_at, first_name, last_name, title, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-02-09 20:20:21 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        contacts
+        (created_at, first_name, last_name, title, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-02-09 20:20:21 [main] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.created_at,
+        c1_0.first_name,
+        c1_0.last_name,
+        c1_0.title,
+        c1_0.updated_at,
+        c1_0.user_id 
+    from
+        contacts c1_0 
+    where
+        c1_0.user_id=? 
+    fetch
+        first ? rows only
+2026-02-09 20:20:21 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (active, created_at, email, first_name, last_name, password, phone_number, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-09 20:20:21 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        contacts
+        (created_at, first_name, last_name, title, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-02-09 20:20:21 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        contacts
+        (created_at, first_name, last_name, title, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-02-09 20:20:21 [main] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.created_at,
+        c1_0.first_name,
+        c1_0.last_name,
+        c1_0.title,
+        c1_0.updated_at,
+        c1_0.user_id 
+    from
+        contacts c1_0 
+    where
+        c1_0.user_id=? 
+        and (
+            lower(c1_0.first_name) like lower(('%'||?||'%')) escape '' 
+            or lower(c1_0.last_name) like lower(('%'||?||'%')) escape ''
+        ) 
+    fetch
+        first ? rows only
+2026-02-09 20:20:21 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (active, created_at, email, first_name, last_name, password, phone_number, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-09 20:20:21 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        contacts
+        (created_at, first_name, last_name, title, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-02-09 20:20:21 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        contacts
+        (created_at, first_name, last_name, title, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-02-09 20:20:21 [main] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.created_at,
+        c1_0.first_name,
+        c1_0.last_name,
+        c1_0.title,
+        c1_0.updated_at,
+        c1_0.user_id 
+    from
+        contacts c1_0 
+    where
+        c1_0.user_id=? 
+        and (
+            lower(c1_0.first_name) like lower(('%'||?||'%')) escape '' 
+            or lower(c1_0.last_name) like lower(('%'||?||'%')) escape ''
+        ) 
+    fetch
+        first ? rows only
+2026-02-09 20:20:21 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (active, created_at, email, first_name, last_name, password, phone_number, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-09 20:20:21 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        contacts
+        (created_at, first_name, last_name, title, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-02-09 20:20:21 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        contacts
+        (created_at, first_name, last_name, title, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-02-09 20:20:21 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (active, created_at, email, first_name, last_name, password, phone_number, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-09 20:20:21 [main] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id 
+    from
+        contacts c1_0 
+    where
+        c1_0.id=? 
+        and c1_0.user_id=? 
+    fetch
+        first ? rows only
+2026-02-09 20:20:21 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (active, created_at, email, first_name, last_name, password, phone_number, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-09 20:20:21 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        contacts
+        (created_at, first_name, last_name, title, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-02-09 20:20:21 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        contacts
+        (created_at, first_name, last_name, title, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-02-09 20:20:21 [main] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.created_at,
+        c1_0.first_name,
+        c1_0.last_name,
+        c1_0.title,
+        c1_0.updated_at,
+        c1_0.user_id 
+    from
+        contacts c1_0 
+    where
+        c1_0.user_id=? 
+        and (
+            lower(c1_0.first_name) like lower(('%'||?||'%')) escape '' 
+            or lower(c1_0.last_name) like lower(('%'||?||'%')) escape ''
+        ) 
+    fetch
+        first ? rows only
+2026-02-09 20:20:21 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (active, created_at, email, first_name, last_name, password, phone_number, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-09 20:20:21 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        contacts
+        (created_at, first_name, last_name, title, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-02-09 20:20:21 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        contacts
+        (created_at, first_name, last_name, title, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-02-09 20:20:21 [main] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id 
+    from
+        contacts c1_0 
+    where
+        c1_0.id=? 
+        and c1_0.user_id=? 
+    fetch
+        first ? rows only
+2026-02-09 20:20:21 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (active, created_at, email, first_name, last_name, password, phone_number, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-09 20:20:21 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        contacts
+        (created_at, first_name, last_name, title, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-02-09 20:20:21 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        contacts
+        (created_at, first_name, last_name, title, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-02-09 20:20:21 [main] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.id,
+        c1_0.created_at,
+        c1_0.first_name,
+        c1_0.last_name,
+        c1_0.title,
+        c1_0.updated_at,
+        c1_0.user_id 
+    from
+        contacts c1_0 
+    where
+        c1_0.user_id=? 
+        and (
+            lower(c1_0.first_name) like lower(('%'||?||'%')) escape '' 
+            or lower(c1_0.last_name) like lower(('%'||?||'%')) escape ''
+        ) 
+    fetch
+        first ? rows only
+2026-02-09 20:20:21 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.susa.circle.repository.UserRepositoryTest]: UserRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-02-09 20:20:21 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.susa.circle.CircleApplication for test class com.susa.circle.repository.UserRepositoryTest
+2026-02-09 20:20:21 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (active, created_at, email, first_name, last_name, password, phone_number, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-09 20:20:21 [main] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.email=? 
+    fetch
+        first ? rows only
+2026-02-09 20:20:21 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (active, created_at, email, first_name, last_name, password, phone_number, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-09 20:20:21 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (active, created_at, email, first_name, last_name, password, phone_number, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-09 20:20:21 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (active, created_at, email, first_name, last_name, password, phone_number, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-09 20:20:21 [main] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.active,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.last_name,
+        u1_0.password,
+        u1_0.phone_number,
+        u1_0.updated_at 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-09 20:20:21 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (active, created_at, email, first_name, last_name, password, phone_number, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-09 20:20:21 [main] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.active,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.last_name,
+        u1_0.password,
+        u1_0.phone_number,
+        u1_0.updated_at 
+    from
+        users u1_0 
+    where
+        u1_0.phone_number=?
+2026-02-09 20:20:21 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (active, created_at, email, first_name, last_name, password, phone_number, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-09 20:20:21 [main] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.phone_number=? 
+    fetch
+        first ? rows only
+2026-02-09 20:20:21 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (active, created_at, email, first_name, last_name, password, phone_number, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-09 20:20:21 [main] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.active,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.last_name,
+        u1_0.password,
+        u1_0.phone_number,
+        u1_0.updated_at 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-09 20:20:21 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (active, created_at, email, first_name, last_name, password, phone_number, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-09 20:20:21 [main] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.phone_number=? 
+    fetch
+        first ? rows only
+2026-02-09 20:20:21 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (active, created_at, email, first_name, last_name, password, phone_number, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-09 20:20:21 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (active, created_at, email, first_name, last_name, password, phone_number, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-09 20:20:21 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (active, created_at, email, first_name, last_name, password, phone_number, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-09 20:20:21 [main] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.active,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.last_name,
+        u1_0.password,
+        u1_0.phone_number,
+        u1_0.updated_at 
+    from
+        users u1_0 
+    where
+        u1_0.phone_number=?
+2026-02-09 20:20:21 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (active, created_at, email, first_name, last_name, password, phone_number, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-09 20:20:21 [main] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.email=? 
+    fetch
+        first ? rows only
+2026-02-09 20:20:21 [main] ERROR com.susa.circle.security.JwtUtil - Token validation failed: Malformed protected header JSON: Unable to deserialize: Unexpected character ('�' (code 65533 / 0xfffd)): expected a valid value (JSON String, Number, Array, Object or token 'null', 'true' or 'false')
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 1]
+2026-02-09 20:20:21 [main] ERROR com.susa.circle.security.JwtUtil - Token validation failed: JWT expired 932 milliseconds ago at 2026-02-09T15:20:21.000Z. Current time: 2026-02-09T15:20:21.932Z. Allowed clock skew: 0 milliseconds.
+2026-02-09 20:20:22 [main] INFO  com.susa.circle.service.AuthService - Attempting to change password for user id: 1
+2026-02-09 20:20:22 [main] INFO  com.susa.circle.service.AuthService - Attempting to change password for user id: 1
+2026-02-09 20:20:22 [main] INFO  com.susa.circle.service.AuthService - Password changed successfully for user id: 1
+2026-02-09 20:20:22 [main] INFO  com.susa.circle.service.AuthService - Attempting to login user: john@example.com
+2026-02-09 20:20:22 [main] INFO  com.susa.circle.service.AuthService - User logged in successfully: john@example.com
+2026-02-09 20:20:22 [main] INFO  com.susa.circle.service.AuthService - Attempting to login user: john@example.com
+2026-02-09 20:20:22 [main] DEBUG com.susa.circle.service.AuthService - Fetching user profile for id: 1
+2026-02-09 20:20:22 [main] DEBUG com.susa.circle.service.AuthService - Fetching user profile for id: 1
+2026-02-09 20:20:22 [main] INFO  com.susa.circle.service.AuthService - Attempting to change password for user id: 1
+2026-02-09 20:20:22 [main] INFO  com.susa.circle.service.AuthService - Attempting to register user with email: john@example.com or phone: +1234567890
+2026-02-09 20:20:22 [main] INFO  com.susa.circle.service.AuthService - User registered successfully with id: 1
+2026-02-09 20:20:22 [main] INFO  com.susa.circle.service.AuthService - Attempting to register user with email: john@example.com or phone: +1234567890
+2026-02-09 20:20:22 [main] INFO  com.susa.circle.service.AuthService - Attempting to register user with email: john@example.com or phone: +1234567890
+2026-02-09 20:20:22 [main] INFO  c.susa.circle.service.ContactService - Deleting contact id: 1 for user id: 1
+2026-02-09 20:20:22 [main] DEBUG c.susa.circle.service.ContactService - Fetching contacts for user id: 1
+2026-02-09 20:20:22 [main] INFO  c.susa.circle.service.ContactService - Creating contact for user id: 1
+2026-02-09 20:20:22 [main] DEBUG c.susa.circle.service.ContactService - Fetching contact id: 1 for user id: 1
+2026-02-09 20:20:22 [main] INFO  c.susa.circle.service.ContactService - Deleting contact id: 1 for user id: 1
+2026-02-09 20:20:22 [main] INFO  c.susa.circle.service.ContactService - Updating contact id: 1 for user id: 1
+2026-02-09 20:20:22 [main] DEBUG c.susa.circle.service.ContactService - Fetching contact id: 1 for user id: 1
+2026-02-09 20:20:22 [main] DEBUG c.susa.circle.service.ContactService - Searching contacts for user id: 1 with search term: jane
+2026-02-09 20:20:22 [main] INFO  c.susa.circle.service.ContactService - Updating contact id: 1 for user id: 1
+2026-02-09 20:20:22 [main] INFO  c.susa.circle.service.ContactService - Deleting contact id: 1 for user id: 1
+2026-02-09 20:20:22 [main] INFO  c.susa.circle.service.ContactService - Contact deleted successfully with id: 1
+2026-02-09 20:20:22 [main] INFO  c.susa.circle.service.ContactService - Creating contact for user id: 1
+2026-02-09 20:20:22 [main] INFO  c.susa.circle.service.ContactService - Contact created successfully with id: 1
+2026-02-09 20:20:22 [main] DEBUG c.susa.circle.service.ContactService - Fetching contact id: 1 for user id: 1
+2026-02-09 20:20:22 [main] INFO  c.susa.circle.service.ContactService - Updating contact id: 1 for user id: 1
+2026-02-09 20:20:22 [main] INFO  c.susa.circle.service.ContactService - Contact updated successfully with id: 1
+2026-02-09 20:20:22 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.susa.circle.CircleApplicationTests]: CircleApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-02-09 20:20:22 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.susa.circle.CircleApplication for test class com.susa.circle.CircleApplicationTests
+2026-02-09 20:20:22 [main] INFO  o.s.b.d.r.RestartApplicationListener - Restart disabled due to context in which it is running
+2026-02-09 20:20:22 [main] INFO  c.susa.circle.CircleApplicationTests - Starting CircleApplicationTests using Java 25.0.2 with PID 17850 (started by onyxd in /home/onyxd/Downloads/repo/circle)
+2026-02-09 20:20:22 [main] DEBUG c.susa.circle.CircleApplicationTests - Running with Spring Boot v4.0.1, Spring v7.0.2
+2026-02-09 20:20:22 [main] INFO  c.susa.circle.CircleApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2026-02-09 20:20:23 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-09 20:20:23 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 2 JPA repository interfaces.
+2026-02-09 20:20:23 [main] INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-02-09 20:20:23 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-09 20:20:23 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2026-02-09 20:20:23 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@392944b7
+2026-02-09 20:20:23 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2026-02-09 20:20:23 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-09 20:20:23 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/contact_management]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.1
+	Default catalog/schema: contact_management/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-09 20:20:23 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-09 20:20:23 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-09 20:20:24 [main] INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-02-09 20:20:24 [main] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-02-09 20:20:24 [main] DEBUG o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-02-09 20:20:24 [main] INFO  c.susa.circle.CircleApplicationTests - Started CircleApplicationTests in 2.056 seconds (process running for 20.92)
+2026-02-09 20:20:24 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-09 20:20:25 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-02-09 20:20:25 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-02-09 20:20:25 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-09 20:20:25 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2026-02-09 20:20:25 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.

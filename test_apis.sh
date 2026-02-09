@@ -558,3 +558,113 @@ while true; do
 
     read -p "Press Enter to continue..."
 done
+
+
+
+_________________________________________________________________________+++++++++++++++++++++++++++
+# This workflow will build a Java project with Maven, and cache/restore any dependencies to improve the workflow execution time
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-java-with-maven
+name: Java CI with Maven
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    # PostgreSQL service for integration tests
+    services:
+      postgres:
+        image: postgres:15
+        env:
+          POSTGRES_DB: contact_management
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+        ports:
+          - 5432:5432
+        # Set health checks to wait until postgres has started
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0  # Shallow clones should be disabled for better SonarQube analysis
+
+    - name: Set up JDK 25
+      uses: actions/setup-java@v4
+      with:
+        java-version: '25'
+        distribution: 'temurin'
+        cache: maven
+
+    - name: Verify Java and Maven versions
+      run: |
+        java -version
+        mvn -version
+
+    - name: Cache Maven packages
+      uses: actions/cache@v3
+      with:
+        path: ~/.m2
+        key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+        restore-keys: ${{ runner.os }}-m2
+
+    - name: Cache SonarQube packages
+      uses: actions/cache@v3
+      with:
+        path: ~/.sonar/cache
+        key: ${{ runner.os }}-sonar
+        restore-keys: ${{ runner.os }}-sonar
+
+    - name: Run tests with coverage
+      run: mvn -B clean verify --file pom.xml
+      env:
+        SPRING_DATASOURCE_URL: jdbc:postgresql://localhost:5432/contact_management
+        SPRING_DATASOURCE_USERNAME: postgres
+        SPRING_DATASOURCE_PASSWORD: postgres
+
+    - name: SonarQube Scan
+      run: |
+        mvn -B sonar:sonar \
+          -Dsonar.projectKey=${{ secrets.SONAR_PROJECT_KEY }} \
+          -Dsonar.host.url=${{ secrets.SONAR_HOST_URL }} \
+          -Dsonar.login=${{ secrets.SONAR_TOKEN }}
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+
+    - name: Build with Maven
+      run: mvn -B package -Dmaven.test.skip=true --file pom.xml
+
+    # Optional: Upload test results
+    - name: Upload test results
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: test-results
+        path: target/surefire-reports/
+        retention-days: 7
+
+    # Optional: Upload coverage reports
+    - name: Upload coverage reports
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: coverage-reports
+        path: target/site/jacoco/
+        retention-days: 7
+
+    # Optional: Upload build artifact (JAR file)
+    - name: Upload JAR artifact
+      if: success()
+      uses: actions/upload-artifact@v4
+      with:
+        name: circle-jar
+        path: target/circle-0.0.1-SNAPSHOT.jar
+        retention-days: 7
