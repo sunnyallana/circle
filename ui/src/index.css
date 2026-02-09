@@ -1,0 +1,312 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap");
+
+@import "tailwindcss";
+
+@layer base {
+    :root {
+        --circle-indigo: #4f46e5;
+        --circle-indigo-light: #6366f1;
+        --circle-indigo-dark: #4338ca;
+        --circle-coral: #f97316;
+        --circle-coral-light: #fb923c;
+        --circle-bg: #f8fafc;
+        --circle-surface: #ffffff;
+        --circle-border: #e2e8f0;
+    }
+
+    * {
+        border-color: rgb(229 231 235);
+    }
+
+    body {
+        background-color: rgb(249 250 251);
+        color: rgb(30 41 59);
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-family:
+            "Inter",
+            -apple-system,
+            BlinkMacSystemFont,
+            "Segoe UI",
+            sans-serif;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: "DM Sans", sans-serif;
+        font-weight: 700;
+        letter-spacing: -0.025em;
+    }
+}
+
+@layer components {
+    /* Circle Gradients */
+    .circle-gradient {
+        background: linear-gradient(135deg, #4f46e5 0%, #6366f1 100%);
+    }
+
+    .circle-gradient-coral {
+        background: linear-gradient(135deg, #f97316 0%, #fb923c 100%);
+    }
+
+    .circle-gradient-mixed {
+        background: linear-gradient(135deg, #4f46e5 0%, #f97316 100%);
+    }
+
+    /* Card Styles */
+    .circle-card {
+        background-color: white;
+        border-radius: 1rem;
+        box-shadow:
+            0 1px 3px 0 rgb(0 0 0 / 0.1),
+            0 1px 2px -1px rgb(0 0 0 / 0.1);
+        transition-property: all;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 300ms;
+    }
+
+    .circle-card:hover {
+        box-shadow:
+            0 20px 25px -5px rgb(0 0 0 / 0.1),
+            0 8px 10px -6px rgb(0 0 0 / 0.1);
+        transform: translateY(-0.125rem);
+    }
+
+    /* Logo */
+    .circle-logo {
+        font-family: "DM Sans", sans-serif;
+        font-weight: 700;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        background: linear-gradient(135deg, #4f46e5 0%, #f97316 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    /* Buttons */
+    .btn-circle-primary {
+        font-weight: 600;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+        border-radius: 0.5rem;
+        color: white;
+        transition-property: all;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 300ms;
+        box-shadow:
+            0 10px 15px -3px rgb(79 70 229 / 0.3),
+            0 4px 6px -4px rgb(79 70 229 / 0.3);
+        background: linear-gradient(135deg, #4f46e5 0%, #6366f1 100%);
+    }
+
+    .btn-circle-primary:hover {
+        box-shadow:
+            0 20px 25px -5px rgb(79 70 229 / 0.4),
+            0 8px 10px -6px rgb(79 70 229 / 0.4);
+        background: linear-gradient(135deg, #4338ca 0%, #4f46e5 100%);
+    }
+
+    .btn-circle-primary:active {
+        transform: scale(0.95);
+    }
+
+    .btn-circle-primary:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+
+    .btn-circle-secondary {
+        font-weight: 600;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+        border-radius: 0.5rem;
+        color: white;
+        transition-property: all;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 300ms;
+        box-shadow:
+            0 10px 15px -3px rgb(249 115 22 / 0.3),
+            0 4px 6px -4px rgb(249 115 22 / 0.3);
+        background: linear-gradient(135deg, #f97316 0%, #fb923c 100%);
+    }
+
+    .btn-circle-secondary:hover {
+        box-shadow:
+            0 20px 25px -5px rgb(249 115 22 / 0.4),
+            0 8px 10px -6px rgb(249 115 22 / 0.4);
+        background: linear-gradient(135deg, #ea580c 0%, #f97316 100%);
+    }
+
+    .btn-circle-secondary:active {
+        transform: scale(0.95);
+    }
+
+    .btn-circle-secondary:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+
+    /* Input Fields */
+    .input-circle {
+        width: 100%;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+        border-radius: 0.5rem;
+        border-width: 2px;
+        border-color: rgb(229 231 235);
+        transition-property: all;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 200ms;
+        outline: 2px solid transparent;
+        outline-offset: 2px;
+    }
+
+    .input-circle:focus {
+        border-color: rgb(99 102 241);
+        --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0
+            var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+        --tw-ring-shadow: var(--tw-ring-inset) 0 0 0
+            calc(4px + var(--tw-ring-offset-width)) rgb(99 102 241 / 0.1);
+        box-shadow:
+            var(--tw-ring-offset-shadow), var(--tw-ring-shadow),
+            var(--tw-shadow, 0 0 #0000);
+    }
+
+    /* Background Blobs */
+    .blob-indigo {
+        position: absolute;
+        border-radius: 9999px;
+        opacity: 0.15;
+        filter: blur(64px);
+        animation: float 6s ease-in-out infinite;
+        background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+    }
+
+    .blob-coral {
+        position: absolute;
+        border-radius: 9999px;
+        opacity: 0.2;
+        filter: blur(64px);
+        background: linear-gradient(135deg, #f97316 0%, #fb923c 100%);
+        animation: float 8s ease-in-out infinite reverse;
+    }
+
+    /* Glassmorphism */
+    .glass {
+        background-color: rgb(255 255 255 / 0.95);
+        backdrop-filter: blur(24px);
+    }
+
+    .glass-dark {
+        background-color: rgb(15 23 42 / 0.8);
+        backdrop-filter: blur(24px);
+    }
+}
+
+@layer utilities {
+    /* Text Gradients */
+    .text-gradient-circle {
+        background: linear-gradient(135deg, #4f46e5 0%, #6366f1 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .text-gradient-coral {
+        background: linear-gradient(135deg, #f97316 0%, #fb923c 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .text-gradient-mixed {
+        background: linear-gradient(135deg, #4f46e5 0%, #f97316 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0%,
+    100% {
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        transform: translateY(-20px) scale(1.05);
+    }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgb(243 244 246);
+    border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #6366f1, #f97316);
+    border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, #4f46e5, #ea580c);
+}
+
+/* Selection */
+::selection {
+    background-color: rgb(199 210 254);
+    color: rgb(30 27 75);
+}
+
+::-moz-selection {
+    background-color: rgb(199 210 254);
+    color: rgb(30 27 75);
+}
