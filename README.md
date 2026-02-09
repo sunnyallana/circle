@@ -9,7 +9,7 @@ Watch these video tutorials to see the application in action and learn how to us
 ### 1. Complete Demonstration
 [![Complete Demonstration](https://img.youtube.com/vi/pwQKqkZmDig/maxresdefault.jpg)](https://youtu.be/pwQKqkZmDig)
 
-**[Complete Demonstration](https://youtu.be/pwQKqkZmDig)**
+**[Watch: Complete Demonstration](https://youtu.be/pwQKqkZmDig)**
 
 ### 2. Unit Testing using Junit and Mockito
 [![Unit Testing using Junit and Mockito](https://img.youtube.com/vi/hXB8ot8L130/maxresdefault.jpg)](https://youtu.be/hXB8ot8L130)
@@ -32,7 +32,7 @@ Watch these video tutorials to see the application in action and learn how to us
 - User profile management
 
 ### Contact Management
-- Create, read, update, and delete contacts
+- Create, read, update, delete, import, and export contacts
 - Multiple email addresses per contact (work, personal, etc.)
 - Multiple phone numbers per contact (work, home, personal, etc.)
 - Contact search and filtering
@@ -242,6 +242,62 @@ circle/
 │   │   └── resources/
 │   │       └── application.yml
 │   └── test/
+├── ui/
+│   ├── public/
+│   │   └── logo.svg
+│   ├── src/
+│   │   ├── api/
+│   │   │   ├── auth.api.ts
+│   │   │   ├── axios.config.ts
+│   │   │   └── contacts.api.ts
+│   │   ├── assets/
+│   │   ├── components/
+│   │   │   ├── auth/
+│   │   │   │   ├── LoginForm.tsx
+│   │   │   │   └── RegisterForm.tsx
+│   │   │   ├── contacts/
+│   │   │   │   ├── ContactCard.tsx
+│   │   │   │   ├── ContactList.tsx
+│   │   │   │   ├── ContactSearch.tsx
+│   │   │   │   ├── CreateContactModal.tsx
+│   │   │   │   ├── DeleteContactModal.tsx
+│   │   │   │   ├── ImportExportModal.tsx
+│   │   │   │   └── UpdateContactModal.tsx
+│   │   │   ├── layout/
+│   │   │   │   ├── Layout.tsx
+│   │   │   │   ├── Navbar.tsx
+│   │   │   │   └── ProtectedRoute.tsx
+│   │   │   └── profile/
+│   │   │       ├── ChangePasswordModal.tsx
+│   │   │       └── UserProfile.tsx
+│   │   ├── contexts/
+│   │   │   └── AuthContext.tsx
+│   │   ├── hooks/
+│   │   │   ├── useAuth.ts
+│   │   │   ├── useContacts.ts
+│   │   │   └── useDebounce.ts
+│   │   ├── pages/
+│   │   │   ├── ContactsPage.tsx
+│   │   │   ├── LoginPage.tsx
+│   │   │   ├── ProfilePage.tsx
+│   │   │   └── RegisterPage.tsx
+│   │   ├── types/
+│   │   │   └── index.ts
+│   │   ├── utils/
+│   │   │   └── constants.ts
+│   │   ├── App.tsx
+│   │   ├── index.css
+│   │   └── main.tsx
+│   ├── eslint.config.js
+│   ├── index.html
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── postcss.config.mjs
+│   ├── README.md
+│   ├── tsconfig.app.json
+│   ├── tsconfig.json
+│   ├── tsconfig.node.json
+│   └── vite.config.ts
 ├── pom.xml
 ├── test-apis.sh
 └── README.md
