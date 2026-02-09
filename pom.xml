@@ -35,9 +35,6 @@
 
         <!-- Exclusions -->
         <sonar.exclusions>
-            **/entity/**,
-            **/dto/**,
-            **/config/**,
             **/CircleApplication.java
         </sonar.exclusions>
     </properties>
