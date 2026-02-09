@@ -2,6 +2,8 @@
 
 A full-stack contact management system built with Java Spring Boot backend and React frontend. This application allows users to register, login, and manage their contacts with full CRUD operations, search functionality, and pagination.
 
+[![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=sunnyallana_circle)](https://sonarcloud.io/summary/new_code?id=sunnyallana_circle)
+
 ## Video Demonstrations
 
 Watch these video tutorials to see the application in action and learn how to use it:
