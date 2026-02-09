@@ -11,13 +11,10 @@ Watch these video tutorials to see the application in action and learn how to us
 
 **[Watch: API Tests using Curl in a Bash Script](https://youtu.be/hzb1ZJkuT4k)**
 
-This video demonstrates:
-- Using the interactive `test-apis.sh` bash script
-- Testing all API endpoints with curl commands
-- User registration and authentication flow
-- CRUD operations for contact management
-- Search and pagination functionality
-- Error handling and validation
+### 2. Unit Testing using Junit and Mockito
+[![Unit Testing using Junit and Mockito](https://img.youtube.com/vi/hXB8ot8L130/maxresdefault.jpg)](https://youtu.be/hXB8ot8L130)
+
+**[Watch: Unit Testing using Junit and Mockito](https://youtu.be/hXB8ot8L130)**
 
 ---
 
